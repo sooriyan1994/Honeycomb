@@ -35,7 +35,7 @@ POUTRE = (
 _F ( GROUP_MA = ( 'mast', ), SECTION='RECTANGLE', CARA = ( 'HY', 'HZ', 'EP', ),
 VALE = ( 40, 20, 1.5, ), ),
 #same with the horizontal bar
-_F ( GROUP_MA = ( 'topbeam', ) , SECTION=’RECTANGLE’, CARA = ( 'HY', 'HZ', 'EP', ) , 
+_F ( GROUP_MA = ( 'topbeam', ) , SECTION='RECTANGLE', CARA = ( 'HY', 'HZ', 'EP', ) , 
 VALE = ( 40, 20, 1.5, ), ),
 #next lines would have produced the same section properties
 #_F( GROUP_MA=('topbeam',),SECTION='GENERALE',
@@ -58,277 +58,147 @@ VALE = ( 40, 20, 1.5, ), ),
 #),
 
 #in the next line we give to the discrete element the property of a point mass
-#(CARA=’M_T_D_N’), and give it
+#(CARA='M_T_D_N'), and give it
 #the value of 0.01 tonnes e.g. 10 kg
 DISCRETE = (
-_F ( GROUP_MA=’massN’ , CARA=’M_T_D_N’ , VALE = (.01 ) , ) ,
-#following block set stiffness of point element ’massN’ to null stiffness
+_F ( GROUP_MA='massN' , CARA='M_T_D_N' , VALE = (.01 ) , ) ,
+#following block set stiffness of point element 'massN' to null stiffness
 #although this is not necessary, commenting this block would raise a warning,
 #unimportant in this case
-_F ( GROUP_MA = ( ’massN’ , ) , CARA=’K_T_D_N’ , VALE = ( 0 , 0 , 0 , ) ,
-REPERE=’GLOBAL’, ), ),
+_F ( GROUP_MA = ( 'massN' , ) , CARA='K_T_D_N' , VALE = ( 0 , 0 , 0 , ) ,
+REPERE='GLOBAL', ), ),
 );
 
 
 #U4.44.01 - BOUNDARY CONDITIONS AND LOADINGS
 #DDL - French acronym of DOF
-ground=AFFE_CHAR_MECA ( MODELE=model, DDL_IMPO=_F(GROUP_NO = ( ’groundS’, ’groundN’, ),
+ground=AFFE_CHAR_MECA ( MODELE=model, DDL_IMPO=_F(GROUP_NO = ( 'groundS', 'groundN', ),
 DX=0, DY=0, DZ=0, DRX=0, DRY=0, DRZ=0, ),
 );
 
 #PESANTEUR means Gravity
 selfwght=AFFE_CHAR_MECA ( MODELE=model, PESANTEUR =_F( GRAVITE=10000,
-DIRECTION = ( 0 , 0 , −1) , GROUP_MA = ( ’topbeam’, ’mast’, ’massN’, ), ),
+DIRECTION = ( 0 , 0 , −1) , GROUP_MA = ( 'topbeam', 'mast', 'massN', ), ),
 );
 
-cc=AFFE_CHAR_MECA( MODELE=model, FORCE_NODALE=_F ( GROUP_NO = ( ’loadS’, ) , FZ= −135 ,) ,);
+cc=AFFE_CHAR_MECA( MODELE=model, FORCE_NODALE=_F ( GROUP_NO = ( 'loadS', ) , FZ= −135 ,) ,);
 
 #APPLYING THE UNIFORMLY DISTRIBUTED LOAD
 cr=AFFE_CHAR_MECA( MODELE=model, 
-#FORCE_POUTRE=_F(GROUP_MA=(’topbeam’,),FZ=-0.1,),
-FORCE_NODALE=_F ( GROUP_NO = ( ’topbeam’ , ) , FZ = − 0.1 * 2000 / 17, ),
-#17 is the number of nodes in the group ’topbeam’
+#FORCE_POUTRE=_F(GROUP_MA=('topbeam',),FZ=-0.1,),
+FORCE_NODALE=_F ( GROUP_NO = ( 'topbeam' , ) , FZ = − 0.1 * 2000 / 17, ),
+#17 is the number of nodes in the group 'topbeam'
 );
 
 #STEPPING FOR THE LOAD CASE
 selfw_m=DEFI_FONCTION (
 #NOM-NAME of Parameter
-NOM_PARA=’INST’, VALE = ( 2, 0, 3, 1.35, 5, 1.35, 6, 0 ) ,
-PROL_GAUCHE=’CONSTANT’ , PROL_DROITE=’CONSTANT’ ,
-);
-cc_m=DEFI_FONCTION (
-NOM_PARA=’INST’ ,
-VALE = ( 3 , 0 , 4 , 1 , 5 , 1 , 6 , 0 ) ,
-PROL_GAUCHE=’CONSTANT’ , PROL_DROITE=’CONSTANT’ ,
-);
-cr_m=DEFI_FONCTION (
-NOM_PARA=’INST’ ,
-VALE = ( 4 , 0 , 5 , 1 . 5 ,
-6 ,1 ,) ,
-PROL_GAUCHE=’CONSTANT’ , PROL_DROITE=’CONSTANT’ ,
+NOM_PARA='INST', VALE = ( 2, 0, 3, 1.35, 5, 1.35, 6, 0 ) ,
+PROL_GAUCHE='CONSTANT' , PROL_DROITE='CONSTANT' ,
 );
 
-liste=DEFI_LIST_REEL (
-DEBUT = 2 . 0 ,
-INTERVALLE=_F ( JUSQU_A=6 ,PAS = 1 . 0 , ) ,
+cc_m=DEFI_FONCTION ( NOM_PARA='INST' , VALE = ( 3, 0, 4, 1, 5, 1, 6, 0 ),
+PROL_GAUCHE='CONSTANT' , PROL_DROITE='CONSTANT' ,
 );
 
+cr_m=DEFI_FONCTION ( NOM_PARA='INST', VALE = ( 4, 0, 5, 1.5, 6, 1, ),
+PROL_GAUCHE='CONSTANT' , PROL_DROITE='CONSTANT' ,
+);
 
-#U4.51.01
-stat=MECA_STATIQUE (
-MODELE=model ,
-CHAM_MATER=material ,
-CARA_ELEM=elemcar ,
+#STEP FUNCTION FOR THE CALCULATION
+liste=DEFI_LIST_REEL ( DEBUT = 2.0, INTERVALLE=_F( JUSQU_A=6 ,PAS = 1.0, ) ,
+); #It means start calculation at instance 2 and continue till instance 6 with an interval of 1
+
+
+#U4.51.01 - MAIN CALCULATION/ANALYSIS
+
+stat=MECA_STATIQUE ( MODELE=model, CHAM_MATER=material, CARA_ELEM=elemcar,
 #with the load, or boundary condition defined in EXCIT
 #with the applied step function where needed
-EXCIT = (
-_F ( CHARGE=ground , ) ,
-_F ( CHARGE=selfwght , FONC_MULT=selfw_m , ) ,
-_F ( CHARGE=cc , TYPE_CHARGE=’FIXE’ , FONC_MULT=cc_m , ) ,
-_F ( CHARGE=cr , TYPE_CHARGE=’FIXE’ , FONC_MULT=cr_m , ) ,
+EXCIT = ( _F ( CHARGE=ground , ) , _F ( CHARGE=selfwght , FONC_MULT=selfw_m , ) ,
+_F ( CHARGE=cc , TYPE_CHARGE='FIXE' , FONC_MULT=cc_m , ) ,
+_F ( CHARGE=cr , TYPE_CHARGE='FIXE' , FONC_MULT=cr_m , ) ,
 ),
 #the calculation is made for all instant in this list
 LIST_INST=liste ,
 #we can give a title to this study
-#TITRE=’my_title’
+#TITRE='my_title'
 );
 
+#stat contains only the displacement at nodes, as well as the forces at Gauss points
 
-#U4.80.01
-stat=CALC_CHAMP (
-reuse =stat , RESULTAT=stat ,
-CONTRAINTE = (
-’SIEF_ELNO’ , ’SIPO_ELNO’ , ’SIPM_ELNO’ ,
-),
-FORCE = ( ’REAC_NODA’ , ) ,
+#U4.80.01 - CALCULATING RESULTS
+
+stat=CALC_CHAMP ( reuse =stat , RESULTAT=stat ,
+CONTRAINTE = ( 'SIEF_ELNO' , 'SIPO_ELNO' , 'SIPM_ELNO' , ),
+FORCE = ( 'REAC_NODA' , ) ,
 );
 
-
-masse=POST_ELEM (
-RESULTAT =stat ,
-MODELE=model ,
-MASS_INER=_F ( GROUP_MA = ( ’topbeam’ , ’mast’ , ’massN’ , ) , ) ,
-TITRE= ’masse’
+#Calculate the structural mass of the model
+masse=POST_ELEM ( RESULTAT =stat , MODELE=model ,
+MASS_INER=_F ( GROUP_MA = ( 'topbeam' , 'mast' , 'massN' , ) , ) ,
+TITRE= 'masse'
 );
-#U4.91.03
-IMPR_TABLE (
-TABLE=masse ,
-FORMAT_R=’1PE12.3’ ,
-)
+#U4.91.03 - Printing the results in a table
+IMPR_TABLE ( TABLE=masse , FORMAT_R='1PE12.3',
+) #FORMAT_R = 1PE12.3 prints the numbers with twelve characters,3 digits after the decimal point
 
 
-#U4.81.21
-sum_reac=POST_RELEVE_T (
-ACTION=_F (
-INTITULE=’sum reactions’ ,
-GROUP_NO = ( ’groundS’ , ’groundN’ , ) ,
-RESULTAT=stat ,
-NOM_CHAM=’REAC_NODA’ ,
-TOUT_ORDRE=’OUI’ ,
-RESULTANTE = ( ’DX’ , ’DY’ , ’DZ’ , ) ,
-MOMENT = ( ’DRX’ , ’DRY’ , ’DRZ’ , ) ,
-POINT = ( 0 , 0 , 0 , ) ,
-OPERATION=’EXTRACTION’ ,
-),
+#U4.81.21 - EXTRACT THE VALUE OF COMPONENTS
+sum_reac=POST_RELEVE_T ( ACTION=_F ( INTITULE='sum reactions' , GROUP_NO = ( 'groundS' , 'groundN' , ) ,
+RESULTAT=stat, NOM_CHAM='REAC_NODA', TOUT_ORDRE='OUI', RESULTANTE = ( 'DX' , 'DY' , 'DZ' , ), MOMENT = ( 'DRX' , 'DRY' , 'DRZ' , ) ,
+POINT = ( 0 , 0 , 0 , ) , OPERATION='EXTRACTION' , ),
 );
-IMPR_TABLE ( TABLE=sum_reac , FORMAT_R=’1PE12.3’ , )
+IMPR_TABLE ( TABLE=sum_reac , FORMAT_R='1PE12.3' , ) #Prints the reaction sum
 
 
 #then in tabular format per group of node
-reac1=POST_RELEVE_T (
-ACTION=_F (
-INTITULE=’reactionsS’ ,
-GROUP_NO = ( ’groundS’ , ) ,
-RESULTAT=stat ,
-NOM_CHAM=’REAC_NODA’ ,
-TOUT_ORDRE=’OUI’ ,
-RESULTANTE = ( ’DX’ , ’DY’ , ’DZ’ ) ,
-OPERATION=’EXTRACTION’ ,
-),
+reac1=POST_RELEVE_T ( ACTION=_F ( INTITULE='reactionsS' , GROUP_NO = ( 'groundS' , ) , RESULTAT=stat , 
+NOM_CHAM='REAC_NODA' , TOUT_ORDRE='OUI' , RESULTANTE = ( 'DX' , 'DY' , 'DZ' ) , OPERATION='EXTRACTION' , ),
 );
-#very simple form
-#IMPR_TABLE (TABLE=reac1,)
+
+#very simple form #IMPR_TABLE (TABLE=reac1,)
 #or more detailed with field separator
-IMPR_TABLE (
-TABLE=reac1 ,
-FORMAT=’TABLEAU’ ,UNITE=8 , #this is also the default value
+IMPR_TABLE ( TABLE=reac1, FORMAT='TABLEAU' ,UNITE=8 , #this is also the default value
 #whichever separator that suits the needs
-SEPARATEUR=’ * ’ ,
-FORMAT_R=’1PE12.3’ ,
-TITRE=’reaction_1’ ,
-INFO=2 ,
+SEPARATEUR=' * ',  FORMAT_R='1PE12.3' , TITRE='reaction_1' , INFO=2 ,
 );
-reac2=POST_RELEVE_T (
-ACTION=_F (
-INTITULE=’reactionsN’ ,
-GROUP_NO = ( ’groundN’ , ) ,
-RESULTAT=stat ,
-NOM_CHAM=’REAC_NODA’ ,
-TOUT_ORDRE=’OUI’ ,
-RESULTANTE = ( ’DX’ , ’DY’ , ’DZ’ ) ,
-OPERATION=’EXTRACTION’ ,
-),
+
+#Similarly for reaction 2 group of nodes
+reac2=POST_RELEVE_T ( ACTION=_F ( INTITULE='reactionsN', GROUP_NO = ( 'groundN' , ) , RESULTAT=stat, NOM_CHAM='REAC_NODA',
+TOUT_ORDRE='OUI', RESULTANTE = ( 'DX' , 'DY' , 'DZ' ), OPERATION='EXTRACTION', ),
 );
-IMPR_TABLE ( TABLE=reac2 , FORMAT_R=’1PE12.3’ , )
-#now we print the individual reactions
-#in the .resu file in RESULTAT format
+IMPR_TABLE ( TABLE=reac2 , FORMAT_R='1PE12.3' , )
+
+#now we print the individual reactions  in the .resu file in RESULTAT format
 #U4.91.01
-IMPR_RESU (
-MODELE=model ,
-FORMAT=’RESULTAT’ ,
-RESU=_F (
-NOM_CHAM=’REAC_NODA’ ,
-GROUP_NO = ( ’groundS’ , ’groundN’ , ) ,
-RESULTAT=stat ,
-FORMAT_R=’1PE12.3’ ,
-),
+IMPR_RESU ( MODELE=model , FORMAT='RESULTAT' , RESU=_F ( NOM_CHAM='REAC_NODA' , GROUP_NO = ( 'groundS' , 'groundN' , ) ,
+RESULTAT=stat , FORMAT_R='1PE12.3' , ),
+);
+
+#Printing some KEY VALUES - Printing the minimum and maximum values of the axial force, bending moment etc.
+
+IMPR_RESU ( MODELE=model , FORMAT='RESULTAT' , RESU = (
+_F ( RESULTAT=stat , NOM_CHAM='DEPL' , NOM_CMP='DZ' , GROUP_MA = ( 'topbeam' , ) , 
+FORMAT_R='1PE12.3' , VALE_MAX='OUI' , VALE_MIN='OUI' , ),
+_F ( RESULTAT=stat , NOM_CHAM='SIEF_ELNO' , NOM_CMP='N' , GROUP_MA = ( 'mast' , ) , 
+FORMAT_R='1PE12.3' , VALE_MAX='OUI' , VALE_MIN='OUI' , ),
+_F ( RESULTAT=stat , NOM_CHAM='SIEF_ELNO' , NOM_CMP = ( 'MFY' , 'MFZ' , ) , GROUP_MA = ( 'topbeam' , ) ,
+FORMAT_R='1PE12.3' , VALE_MAX='OUI' , VALE_MIN='OUI' , ), ), 
+);
+
+#Some other stress results 
+IMPR_RESU ( MODELE=model , FORMAT='RESULTAT' , RESU = ( 
+_F ( RESULTAT=stat , NOM_CHAM='SIPO_ELNO' , GROUP_MA = ( 'topbeam' , 'mast' , ) ,FORMAT_R='1PE12.3' , ), ),
 );
 
 
-IMPR_RESU (
-MODELE=model ,
-FORMAT=’RESULTAT’ ,
-RESU = (
-_F (
-RESULTAT=stat ,
-NOM_CHAM=’DEPL’ ,
-NOM_CMP=’DZ’ ,
-GROUP_MA = ( ’topbeam’ , ) ,
-FORMAT_R=’1PE12.3’ ,
-VALE_MAX=’OUI’ , VALE_MIN=’OUI’ ,
-),
-_F (
-RESULTAT=stat ,
-NOM_CHAM=’SIEF_ELNO’ ,
-NOM_CMP=’N’ ,
-GROUP_MA = ( ’mast’ , ) ,
-FORMAT_R=’1PE12.3’ ,
-VALE_MAX=’OUI’ , VALE_MIN=’OUI’ ,
-),
-_F (
-RESULTAT=stat ,
-NOM_CHAM=’SIEF_ELNO’ ,
-NOM_CMP = ( ’MFY’ , ’MFZ’ , ) ,
-GROUP_MA = ( ’topbeam’ , ) ,
-FORMAT_R=’1PE12.3’ ,
-VALE_MAX=’OUI’ , VALE_MIN=’OUI’ ,
-),
-),
-);
-
-
-IMPR_RESU (
-MODELE=model ,
-FORMAT=’RESULTAT’ ,
-RESU = (
-_F (
-RESULTAT=stat ,
-NOM_CHAM=’SIPO_ELNO’ ,
-GROUP_MA = ( ’topbeam’ , ’mast’ , ) ,FORMAT_R=’1PE12.3’ ,
-),
-),
-);
-
-
-#U7.05.21
-IMPR_RESU (
-FORMAT=’MED’ ,
-UNITE=80 ,
-RESU=_F (
+#U7.05.21 - Printing Results for graphical viewing
+IMPR_RESU ( FORMAT='MED' , UNITE=80 , RESU=_F (
 #following lines print on the named groups,
-GROUP_MA = ( ’topbeam’ , ’mast’ , ) ,
-RESULTAT=stat ,
-NOM_CHAM = (
-’DEPL’ ,
-’SIEF_ELNO’ ,
-’SIPO_ELNO’ ,
-’SIPM_ELNO’ ,
-’REAC_NODA’ ,
-),
-),
-);
+GROUP_MA = ( 'topbeam', 'mast', ), RESULTAT=stat , NOM_CHAM = ( 'DEPL' , 'SIEF_ELNO' , 'SIPO_ELNO' , 'SIPM_ELNO' , 'REAC_NODA' , ), 
+), );
 
 
-#U4.11.02
+#U4.11.02 - Procedure to end command file 
 FIN ( ) ;
-
-model = AFFE_MODELE(
-    AFFE=_F(MODELISATION=('DKT', ), PHENOMENE='MECANIQUE', TOUT='OUI'),
-    MAILLAGE=mesh
-)
-
-elempro0 = AFFE_CARA_ELEM(
-    COQUE=_F(EPAIS=0.01, GROUP_MA=('Group_1', )), MODELE=model
-)
-
-Steel = DEFI_MATERIAU(ELAS=_F(E=210000.0, NU=0.3))
-
-fieldmat = AFFE_MATERIAU(AFFE=_F(MATER=(Steel, ), TOUT='OUI'), MODELE=model)
-
-load = AFFE_CHAR_MECA(
-    DDL_IMPO=_F(GROUP_MA=('fix_line', ), LIAISON='ENCASTRE'),
-    FORCE_NODALE=_F(FX=-10000.0, GROUP_NO=('load_line', )),
-    MODELE=model
-)
-
-reslin = MECA_STATIQUE(
-    CARA_ELEM=elempro0,
-    CHAM_MATER=fieldmat,
-    EXCIT=_F(CHARGE=load),
-    MODELE=model
-)
-
-reslin = CALC_CHAMP(
-    reuse=reslin,
-    CARA_ELEM=elempro0,
-    CHAM_MATER=fieldmat,
-    CONTRAINTE=('SIGM_ELGA', 'SIGM_ELNO'),
-    CRITERES=('SIEQ_ELGA', ),
-    MODELE=model,
-    RESULTAT=reslin
-)
-
-IMPR_RESU(FORMAT='MED', RESU=_F(CARA_ELEM=elempro0, RESULTAT=reslin), UNITE=80)
-
-FIN()
-
