@@ -1,0 +1,8 @@
+#
+#--------------------------------------------------------------------------------
+##ASTER 13.04.00 CONCEPT table0 CALCULE LE 14/03/2019 A 16:03:43 DE TYPE          
+#TABLE_SDASTER                                                                   
+INTITULE         NOEUD    RESU     NOM_CHAM         NUME_ORDRE   INST         ABSC_CURV    COOR_X       COOR_Y       COOR_Z       N            VY           VZ           MT           MFY          MFZ         
+stress_table     N1       stress   SIEF_ELNO                   1  0.00000E+00  0.00000E+00 -3.88578E-16  0.00000E+00  0.00000E+00  0.00000E+00 -1.00000E+03 -6.12323E-14  0.00000E+00  1.83697E-13 -3.00000E+03
+stress_table     N2       stress   SIEF_ELNO                   1  0.00000E+00  3.00000E+00  3.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00 -1.00000E+03 -6.12323E-14  0.00000E+00  1.61559E-26 -2.03727E-10
+

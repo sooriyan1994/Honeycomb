@@ -1,0 +1,40 @@
+POURSUITE()
+
+
+unnamed = CALC_CHAMP(
+    CHAM_MATER=fieldmat,
+    CONTRAINTE=('SIGM_ELNO', ),
+    DEFORMATION=('EPSI_ELNO', ),
+    MODELE=model,
+    RESULTAT=reslin
+)
+
+table = POST_RELEVE_T(
+    ACTION=_F(
+        GROUP_NO=('cen_face', ),
+        INTITULE='STRESS_MIDPLANE',
+        NOM_CHAM='SIGM_ELNO',
+        OPERATION=('EXTRACTION', ),
+        RESULTAT=unnamed,
+        TOUT_CMP='OUI'
+    )
+)
+
+table_st = POST_RELEVE_T(
+    ACTION=_F(
+        GROUP_NO=('cen_face', ),
+        INTITULE='STRAIN',
+        NOM_CHAM='EPSI_ELNO',
+        OPERATION=('EXTRACTION', ),
+        RESULTAT=unnamed,
+        TOUT_CMP='OUI'
+    )
+)
+
+IMPR_RESU(FORMAT='MED', RESU=_F(MAILLAGE=mesh, RESULTAT=unnamed), UNITE=80)
+
+IMPR_TABLE(FORMAT='TABLEAU', TABLE=table, UNITE=11)
+
+IMPR_TABLE(FORMAT='TABLEAU', TABLE=table_st, UNITE=10)
+
+FIN()

@@ -1,0 +1,24 @@
+P actions make_etude
+P memjob 2097152
+P memory_limit 2048.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P ncpus 
+P nomjob RunCase_2_stress
+P origine AsterStudy 2017.0.2
+P studyid 16386-0009-INPUNHADHPCSRV
+P time_limit 900.0
+P tpsjob 16
+P version stable
+A memjeveux 256.0
+A tpmax 900.0
+F comm RunCase_2_stress.comm D  1
+F libr bar_disp.rmed D  2
+F libr _ExportedFromSalomeObject_0_1_2_4.med D  20
+R base base-stage1 DC 0
+F libr bar_stress.rmed R  80
+F libr bar_strain.dat R  10
+F libr bar_stress.dat R  11
+F mess message R  6
+R base base-stage2 RC 0

@@ -1,0 +1,431 @@
+# ------------------------------------------------------------------------------------------
+# Impression du contenu du fichier de commandes à exécuter :
+# ------------------------------------------------------------------------------------------
+POURSUITE()
+
+
+unnamed = CALC_CHAMP(
+    CHAM_MATER=fieldmat,
+    CONTRAINTE=('SIGM_ELNO', ),
+    DEFORMATION=('EPSI_ELNO', ),
+    MODELE=model,
+    RESULTAT=reslin
+)
+
+table = POST_RELEVE_T(
+    ACTION=_F(
+        GROUP_NO=('cen_face', ),
+        INTITULE='STRESS_MIDPLANE',
+        NOM_CHAM='SIGM_ELNO',
+        OPERATION=('EXTRACTION', ),
+        RESULTAT=unnamed,
+        TOUT_CMP='OUI'
+    )
+)
+
+table_st = POST_RELEVE_T(
+    ACTION=_F(
+        GROUP_NO=('cen_face', ),
+        INTITULE='STRAIN',
+        NOM_CHAM='EPSI_ELNO',
+        OPERATION=('EXTRACTION', ),
+        RESULTAT=unnamed,
+        TOUT_CMP='OUI'
+    )
+)
+
+IMPR_RESU(FORMAT='MED', RESU=_F(MAILLAGE=mesh, RESULTAT=unnamed), UNITE=80)
+
+IMPR_TABLE(FORMAT='TABLEAU', TABLE=table, UNITE=11)
+
+IMPR_TABLE(FORMAT='TABLEAU', TABLE=table_st, UNITE=10)
+
+FIN()
+# ------------------------------------------------------------------------------------------
+
+  Ouverture en écriture du fichier ./vola.1
+                                                                                
+                                                                                
+              -- CODE_ASTER -- VERSION : EXPLOITATION (stable) --               
+                                                                                
+                     Version 13.4.0 modifiée le 24/10/2017                      
+                     révision d3b9d70df6c4 - branche 'v13'                      
+                         Copyright EDF R&D 1991 - 2019                          
+                                                                                
+                    Exécution du : Fri Mar 15 16:32:00 2019                     
+                       Nom de la machine : INPUNHADHPCSRV                       
+                              Architecture : 64bit                              
+                          Type de processeur : x86_64                           
+Système d'exploitation : Linux Red Hat Enterprise Linux Server 7.6 Maipo 3.10.0-957.5.1.el7.x86_64
+                        Langue des messages : en (UTF-8)                        
+                                                                                
+                           Version de Python : 2.7.10                           
+                            Version de NumPy : 1.9.2                            
+                           Parallélisme MPI : inactif                           
+                          Parallélisme OpenMP : actif                           
+                       Nombre de processus utilisés : 32                        
+                     Version de la librairie HDF5 : 1.8.14                      
+                      Version de la librairie MED : 3.2.1                       
+                     Version de la librairie MFront : 3.0.0                     
+                     Version de la librairie MUMPS : 5.1.1                      
+                        Librairie PETSc : non disponible                        
+                     Version de la librairie SCOTCH : 6.0.4                     
+
+                  Mémoire limite pour l'exécution : 2048.00 Mo                  
+                  consommée par l'initialisation : 1623.61 Mo                   
+                  par les objets du jeu de commandes : 0.00 Mo                  
+                 reste pour l'allocation dynamique : 422.57 Mo                  
+                Taille limite des fichiers d'échange : 12.00 Go                 
+                                                                                
+
+  Valeur initiale du temps CPU maximum =   900 secondes
+  Valeur du temps CPU maximum passé aux commandes =   810 secondes
+  Réserve CPU prévue = 90 secondes
+
+  Ouverture en lecture du fichier ./glob.1
+
+     Nom de la base                          :  GLOBALE
+     Créée avec la version                   :  13.04.00
+     Nombre d'enregistrements utilisés       :  49
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre d'identificateurs utilisés       :  300
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  15 %
+
+  Ouverture en lecture du fichier ./glob.1
+
+  Ouverture en écriture du fichier ./vola.1
+
+  Fin de lecture (durée  0.000004  s.) 
+
+ Lecture du fichier pick.1...
+
+  La signature de la base relue est conforme à celle attendue (à l'adresse 0) :
+    9313e6570e1ed1f79f78e550d84fad670914acbb
+
+  Liste des concepts issus de la base :
+    Nom         Type du concept
+    BC          char_meca               
+    reslin      evol_elas               
+    load0       char_meca               
+    mesh        maillage_sdaster        
+    steel       mater_sdaster           
+    model       modele_sdaster          
+    fieldmat    cham_mater              
+
+  L'exécution précédente s'est terminée correctement.
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0001            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  POURSUITE(INFO=1,
+            CODE='NON',
+            PAR_LOT='OUI',
+            IMPR_MACRO='NON',
+            RESERVE_CPU=_F(BORNE=900,),
+            MEMOIRE=_F(TAILLE_BLOC=800.0,
+                       TAILLE_GROUP_ELEM=1000,),
+            DEBUG=_F(JEVEUX='NON',
+                     JXVERI='NON',
+                     HIST_ETAPE='NON',
+                     SDVERI='NON',),
+            FORMAT_HDF='NON',
+            MESURE_TEMPS=_F(MOYENNE='NON',
+                            NIVE_DETAIL=1,),
+            )
+
+  # Mémoire (Mo) :  1693.30 /  1685.66 /     7.58 /     7.58 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0001   user+syst:        0.00s (syst:        0.00s, elaps:        0.00s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0002            Concept de type : evol_elas
+  # ------------------------------------------------------------------------------------------
+  unnamed = CALC_CHAMP(CHAM_MATER=fieldmat,
+                       RESULTAT=reslin,
+                       MODELE=model,
+                       PRECISION=1.E-06,
+                       CONTRAINTE=('SIGM_ELNO', ),
+                       DEFORMATION=('EPSI_ELNO', ),
+                       INFO=1,
+                       CRITERE='RELATIF',)
+
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      2.96      2.30      0.10
+  # Mémoire (Mo) :  1965.88 /  1964.66 /    37.92 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0002   user+syst:        3.57s (syst:        2.78s, elaps:        0.16s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0003            Concept de type : table_sdaster
+  # ------------------------------------------------------------------------------------------
+  table = POST_RELEVE_T(ACTION=_F(INTITULE='STRESS_MIDPLANE',
+                                  RESULTAT=unnamed,
+                                  OPERATION=('EXTRACTION', ),
+                                  GROUP_NO=('cen_face', ),
+                                  TOUT_CMP='OUI',
+                                  REPERE='GLOBAL',
+                                  MOYE_NOEUD='OUI',
+                                  NOM_CHAM='SIGM_ELNO',
+                                  PRECISION=1.E-06,
+                                  CRITERE='RELATIF',
+                                  FORMAT_C='MODULE',),
+                        INFO=1,)
+
+  # Mémoire (Mo) :  1969.79 /  1965.12 /    41.70 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0003   user+syst:        0.84s (syst:        0.64s, elaps:        0.05s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0004            Concept de type : table_sdaster
+  # ------------------------------------------------------------------------------------------
+  table_st = POST_RELEVE_T(ACTION=_F(INTITULE='STRAIN',
+                                     RESULTAT=unnamed,
+                                     OPERATION=('EXTRACTION', ),
+                                     GROUP_NO=('cen_face', ),
+                                     TOUT_CMP='OUI',
+                                     REPERE='GLOBAL',
+                                     MOYE_NOEUD='OUI',
+                                     NOM_CHAM='EPSI_ELNO',
+                                     PRECISION=1.E-06,
+                                     CRITERE='RELATIF',
+                                     FORMAT_C='MODULE',),
+                           INFO=1,)
+
+  # Mémoire (Mo) :  1969.79 /  1965.31 /    41.72 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0004   user+syst:        0.04s (syst:        0.00s, elaps:        0.04s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0005            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  IMPR_RESU(FORMAT='MED',
+            RESU=_F(RESULTAT=unnamed,
+                    MAILLAGE=mesh,
+                    INFO_MAILLAGE='NON',
+                    IMPR_NOM_VARI='OUI',),
+            UNITE=80,
+            INFO=1,
+            PROC0='OUI',)
+
+  # Mémoire (Mo) :  1969.79 /  1965.60 /    41.72 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0005   user+syst:        0.09s (syst:        0.02s, elaps:        0.09s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0006            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  IMPR_TABLE(FORMAT='TABLEAU',
+             TABLE=table,
+             UNITE=11,
+             FIN_TABLE='',
+             COMMENTAIRE='#',
+             DEBUT_LIGNE='',
+             SEPARATEUR=' ',
+             FIN_LIGNE='\n',
+             COMM_PARA='',
+             INFO=1,
+             IMPR_FONCTION='NON',
+             FORMAT_R='E12.5',)
+
+  # Mémoire (Mo) :  1969.79 /  1965.60 /    41.72 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0006   user+syst:        0.02s (syst:        0.00s, elaps:        0.02s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0009            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  IMPR_TABLE(FORMAT='TABLEAU',
+             TABLE=table_st,
+             UNITE=10,
+             FIN_TABLE='',
+             COMMENTAIRE='#',
+             DEBUT_LIGNE='',
+             SEPARATEUR=' ',
+             FIN_LIGNE='\n',
+             COMM_PARA='',
+             INFO=1,
+             IMPR_FONCTION='NON',
+             FORMAT_R='E12.5',)
+
+  # Mémoire (Mo) :  1969.79 /  1965.60 /    41.72 /    35.01 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0009   user+syst:        0.01s (syst:        0.00s, elaps:        0.00s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0012            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  FIN(INFO_RESU='OUI',
+      RETASSAGE='NON',
+      FORMAT_HDF='NON',
+      PROC0='OUI',)
+
+   
+   !-------------------------------------------------------------------------!
+   ! <I> <CATAMESS_89>                                                       !
+   !                                                                         !
+   !     Liste des alarmes émises lors de l'exécution du calcul.             !
+   !                                                                         !
+   !     Les alarmes que vous avez choisies d'ignorer sont précédées de (*). !
+   !     Nombre d'occurrences pour chacune des alarmes :                     !
+   !            aucune alarme                                                !
+   !-------------------------------------------------------------------------!
+   
+
+ ======>
+
+ STRUCTURE DU CONCEPT reslin   CALCULE POUR 1 NUMERO D'ORDRE
+
+ LISTE DES NOMS SYMBOLIQUES:
+ ! ---------- !----------------!----------------!
+ ! NUME_ORDRE !      DEPL      !   SIEF_ELGA    !
+ ! ---------- !----------------!----------------!
+ !          1 !     DEPL_R     !     SIEF_R     !
+ ! ---------- !----------------!----------------!
+
+ LISTE DES NOMS DE VARIABLES D'ACCES:
+                                      INST             DE TYPE  R
+
+ LISTE DES NOMS DE PARAMETRES:
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ! NUME_ORDRE !    CARAELEM    !    CHAMPMAT    !     EXCIT      !   ITER_GCPC    !    METHODE     !     MODELE     !     RENUM      !    STOCKAGE    !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ !          1 !       K8       !       K8       !      K24       !       I        !      K16       !       K8       !      K16       !      K16       !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+
+ ======>
+
+ STRUCTURE DU CONCEPT unnamed  CALCULE POUR 1 NUMERO D'ORDRE
+
+ LISTE DES NOMS SYMBOLIQUES:
+ ! ---------- !----------------!----------------!
+ ! NUME_ORDRE !   EPSI_ELNO    !   SIGM_ELNO    !
+ ! ---------- !----------------!----------------!
+ !          1 !     EPSI_R     !     SIEF_R     !
+ ! ---------- !----------------!----------------!
+
+ LISTE DES NOMS DE VARIABLES D'ACCES:
+                                      INST             DE TYPE  R
+
+ LISTE DES NOMS DE PARAMETRES:
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ! NUME_ORDRE !    CARAELEM    !    CHAMPMAT    !     EXCIT      !   ITER_GCPC    !    METHODE     !     MODELE     !     RENUM      !    STOCKAGE    !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ !          1 !       K8       !       K8       !      K24       !       I        !      K16       !       K8       !      K16       !      K16       !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ---------------------------------------------------------------------------
+ Concepts de la base: G
+    Nom       Type                 Taille (Mo)         Nombre      Nombre de
+                                                     d'objets       segments
+    TOTAL                                32.14            248            383
+  
+    mesh       MAILLAGE_SDASTER           0.74             36             62
+    model      MODELE_SDASTER             0.33              8             13
+    steel      MATER_SDASTER              0.00              5              5
+    fieldmat   CHAM_MATER                 0.00              6             11
+    BC         CHAR_MECA                  0.11             23             43
+    load0      CHAR_MECA                  0.07              8             13
+    reslin     EVOL_ELAS                  0.72             25             34
+    unnamed    EVOL_ELAS                  2.53             18             22
+    table      TABLE_SDASTER              0.01             37             37
+    table_st   TABLE_SDASTER              0.01             37             37
+    &FOZERO                               0.00              2              2
+    &&_NUM_C                              0.00              1              1
+    &CATA.AC                              0.00              2              4
+    &CATA.CL                              0.86              1              3
+    &CATA.GD                              0.14              4             11
+    &CATA.ME                              0.20              2              4
+    &CATA.OP                              0.32              4             19
+    &CATA.PH                              0.00              1              1
+    &CATA.PR                              0.00              2              4
+    &CATA.TE                             26.07             17             42
+    &CATA.TH                              0.01              2              4
+    &CATA.TM                              0.01              7             11
+ ---------------------------------------------------------------------------
+
+
+     Nom de la base                          :  GLOBALE
+     Nombre d'enregistrements utilisés       :  54
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  110
+     Volume des accès en lecture             :         85.94 Mo.
+     Nombre total d'accès en écriture        :  20
+     Volume des accès en écriture            :         15.62 Mo.
+     Nombre d'identificateurs utilisés       :  411
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  20 %
+
+
+     Nom de la base                          :  VOLATILE
+     Nombre d'enregistrements utilisés       :  3
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  0
+     Volume des accès en lecture             :          0.00 Mo.
+     Nombre total d'accès en écriture        :  4
+     Volume des accès en écriture            :          3.12 Mo.
+     Nombre d'identificateurs utilisés       :  375
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  18 %
+
+ <FIN> Arrêt normal dans "FIN".
+  
+ <I>       FERMETURE DES BASES EFFECTUEE
+  
+   STATISTIQUES CONCERNANT L'ALLOCATION DYNAMIQUE :
+     TAILLE CUMULEE MAXIMUM            :                   42  Mo.
+     TAILLE CUMULEE LIBEREE            :                    9  Mo.
+     NOMBRE TOTAL D'ALLOCATIONS        :                 9605
+     NOMBRE TOTAL DE LIBERATIONS       :                 9605
+     APPELS AU MECANISME DE LIBERATION :                    0
+     TAILLE MEMOIRE CUMULEE RECUPEREE  :                    0  Mo.
+     VOLUME DES LECTURES               :                    0  Mo.
+     VOLUME DES ECRITURES              :                    0  Mo.
+  
+   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      35.01 Mo
+     - IMPOSE DE NOMBREUX ACCES DISQUE
+     - RALENTIT LA VITESSE D'EXECUTION
+   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :      41.72 Mo
+     - LIMITE LES ACCES DISQUE
+     - AMELIORE LA VITESSE D'EXECUTION
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :    1969.79 Mo
+     - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
+       LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
+  
+ <I>       FIN D'EXECUTION LE : VE-15-MARS-2019 16:32:01
+
+
+  <I> Informations sur les temps d'exécution
+      Temps cpu user total                    2.46 s
+      Temps cpu systeme total                 3.74 s
+      Temps elapsed total                     1.97 s
+      Temps restant                         808.03 s
+
+
+  La signature de la base sauvegardée est (à l'adresse 0) :
+    b492fc960a80f884e608c6f3a73240b3c28f3947
+
+ ********************************************************************************
+ * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+ ********************************************************************************
+ * init (jdc)               :       1.30 :       0.27 :       1.57 :       1.58 *
+ *  . compile               :       0.01 :       0.00 :       0.01 :       0.00 *
+ *  . exec_compile          :       0.78 :       0.15 :       0.93 :       0.93 *
+ *  . report                :       0.00 :       0.00 :       0.00 :       0.01 *
+ *  . build                 :       0.00 :       0.00 :       0.00 :       0.00 *
+ * POURSUITE                :       0.00 :       0.00 :       0.00 :       0.00 *
+ * CALC_CHAMP               :       0.79 :       2.78 :       3.57 :       0.16 *
+ * POST_RELEVE_T            :       0.20 :       0.64 :       0.84 :       0.05 *
+ * POST_RELEVE_T            :       0.04 :       0.00 :       0.04 :       0.04 *
+ * IMPR_RESU                :       0.07 :       0.02 :       0.09 :       0.09 *
+ * IMPR_TABLE               :       0.02 :       0.00 :       0.02 :       0.02 *
+ * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
+ * FIN                      :       0.01 :       0.01 :       0.02 :       0.03 *
+ *  . part Superviseur      :       1.36 :       0.34 :       1.70 :       1.62 *
+ *  . part Fortran          :       1.10 :       3.39 :       4.49 :       0.35 *
+ ********************************************************************************
+ * TOTAL_JOB                :       2.46 :       3.74 :       6.20 :       1.97 *
+ ********************************************************************************
+
+EXECUTION_CODE_ASTER_EXIT_55734=0

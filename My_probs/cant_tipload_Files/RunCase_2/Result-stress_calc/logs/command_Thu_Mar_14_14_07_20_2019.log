@@ -1,0 +1,1344 @@
+
+>>> 2019/03/14-14:07:21.175  [start@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/main.py:75]
+Command line run on 'INPUNHADHPCSRV.TRDDC.COM'
+using python executable '/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin/python' :
+['/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin/as_run',
+ 'export']
+
+>>> 2019/03/14-14:07:21.176  [__init__@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:194]
+AsterSystem param :
+{'remote_copy_protocol': 'SCP', 'remote_shell_protocol': 'SSH'}
+
+>>> 2019/03/14-14:07:21.177  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.177  [GetMemInfo@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:872]
+cmd :
+cat /proc/meminfo
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.200  [GetMemInfo@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:879]
+GetMemInfo 'memtotal' returns : 257820
+
+>>> 2019/03/14-14:07:21.200  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.200  [GetCpuInfo@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:850]
+cmd :
+cat /proc/cpuinfo
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.212  [GetCpuInfo@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:858]
+GetCpuInfo 'numcpu' returns : 64
+
+>>> 2019/03/14-14:07:21.212  [get_limits@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'interactif_memmax': 257820,
+ 'interactif_mpi_nbpmax': 32,
+ 'interactif_nbpmax': 64,
+ 'interactif_tpsmax': '9999:00:00'}
+
+>>> 2019/03/14-14:07:21.213  [get_limits@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'batch_memmax': 257820,
+ 'batch_mpi_nbpmax': 32,
+ 'batch_nbpmax': 64,
+ 'batch_tpsmax': '9999:00:00'}
+
+>>> 2019/03/14-14:07:21.213  [PostConf@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py:584]
+installation dirs (aster_root, confdir, localedir, LANG)
+/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170
+/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/etc/codeaster
+/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/share/locale
+en_US.UTF-8
+
+>>> 2019/03/14-14:07:21.215  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:152]
+source list : (u'export',)
+destination : /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066
+
+>>> 2019/03/14-14:07:21.215  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:152]
+cmd :
+cp -L -r export /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.231  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2019/03/14-14:07:21.232  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2019/03/14-14:07:21.239  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2019/03/14-14:07:21.239  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2019/03/14-14:07:21.239  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:161]
+Input export : /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066
+AsterProfil object   = 0x1b7fb80
+.filename            = /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066
+P actions make_etude
+P memjob 2097152
+P memory_limit 2048.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P nomjob RunCase_2_stress_calc
+P origine AsterStudy 2017.0.2
+P studyid 16654-0004-INPUNHADHPCSRV
+P time_limit 900.0
+P tpsjob 16
+P version stable
+A memjeveux 256.0
+A tpmax 900.0
+F comm /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/RunCase_2_stress_calc.comm D  1
+F libr /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/cant_tipload.rmed D  80
+F libr /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/_Expo
+[...]
+
+>>> 2019/03/14-14:07:21.241  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.242  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:801]
+cmd :
+bash -c env
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.252  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:802]
+env_init
+JOBMANAGER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+CSF_XmlOcafResource=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/XmlOcafResource
+SALOME_HexoticPLUGINResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexoticplugin
+SSH_AGENT_PID=15295
+HOMARD_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+EFICAS_NOUVEAU_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0
+XDG_SESSION_ID=c15
+LRELEASE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin/lrelease
+OMNIORB_USERS_PATH=/tmp
+HOSTNAME=INPUNHADHPCSRV
+EUROPLEXUS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ASTER_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170
+XRDP_SOCKET_PATH=/tmp/.xrdp
+ASTER_VERSION_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster
+QWTHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612
+FREETYPE_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411
+SALOMEMECA_MOFEM_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170
+ADD_TO_QT_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/plugins
+TCLDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513
+CSF_StandardDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+TERM=xterm-256color
+VTE_VERSION=5202
+XDG_MENU_PREFIX=gnome-
+SHELL=/bin/bash
+PARAVIS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PYGMENTS_HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202
+NSHOST=no_host
+HISTSIZE=1000
+LIBXML_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290
+DOCUTILS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012
+TOOLS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools
+QT_QPA_PLATFORM_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/plugins/platforms
+GEOM_PluginsList=BREPPlugin:STEPPlugin:IGESPlugin:STLPlugin:XAOPlugin:VTKPlugin:AdvancedGEOM
+CSF_XSMessage=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/XSMessage
+KERNEL_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+GRAPHVIZHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380
+GJS_DEBUG_OUTPUT=stderr
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/98e17fc0_4855_4922_b09a_94837d083379
+HOMARD_REP_EXE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_tool-118
+HOMARD_ASTER_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster
+MEDCOUPLING_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0
+CYTHON_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232
+PVVERSION=5.1
+PYUIC=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin/pyuic5
+SUITRoot=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome
+SALOME_GHS3DPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/ghs3dplugin
+LC_NUMERIC=C
+YACS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+TK_LIBRARY=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib/tk8.5
+FREEIMAGE_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1
+DATA_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SAMPLES_V8_3_0
+PREFS_CATA_CF=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF
+APPLI=../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+QTDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611
+PARAVISADDONS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0
+QTINC=/usr/lib64/qt-3.3/include
+MISS3D_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+PYTHONEXECUTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin/python
+HDF5HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814
+CSF_SHMessageStd=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/SHMessageStd
+ASTER_OLDSTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280
+ADAO_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_HYBRIDPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hybridplugin
+SIP_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418
+QT_GRAPHICSSYSTEM_CHECKED=1
+IMSETTINGS_MODULE=none
+USER=u1449908
+GMSH_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110
+HEXABLOCK_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+LD_LIBRARY_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Tix8.4.3:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Togl1.7:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/Lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps4-4100_aster3/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib/graphviz:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tbb-424/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Opencv-231/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/lib/Linux_64:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome/lib:/lib64:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Tix8.4.3:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Togl1.7:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/Lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps4-4100_aster3/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib/graphviz:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tbb-424/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Opencv-231/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/lib/Linux_64:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome/lib:/lib64
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+CGNSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134
+CSF_StandardLiteDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+ROOT_SALOME=/INSTALLABLES/salome_meca-2017/V2017.0.2
+OMNIORB_CONFIG=/tmp/.omniORB_u1449908_INPUNHADHPCSRV_2832.cfg
+CASROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1
+ASTERSTUDY_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+GNOME_TERMINAL_SERVICE=:1.99
+ECREVISSE_OLD_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Ecrevisse_old-321
+SMESH_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0
+CPPUNIT_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132
+TCL_LIBRARY=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/tcl8.5
+SALOMEMECA_PYUTILS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170
+DEBIANFORSALOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome
+SSH_AUTH_SOCK=/run/user/1050/keyring/ssh
+export FreeImage_version=3.16.0
+CSF_MDTVFontDirectory=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/FontMFT
+LIBBATCH_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1
+GMSH_BIN_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin
+CSF_UnitsDefinition=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/UnitsAPI/Units.dat
+SCOTCHDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/14921,unix/unix:/tmp/.ICE-unix/14921
+EFICAS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+MPLCONFIGDIR=/home/u1449908/.config/salome/matplotlib-1.4.3
+HexoticPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_18
+NETGENPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+GNOME_SHELL_SESSION_MODE=classic
+PREREQUISITES_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites
+PARAVIS_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0
+MAIL=/var/spool/mail/u1449908
+PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/outils:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/bin/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/bin/Linux_64:/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/bin/Linux_64:/usr/lib64/qt-3.3/bin:/usr/bin:/usr/lib64/openmpi/bin/:/usr/local/bin/:/usr/lib64/openmpi/bin/:/root/OpenFOAM/ThirdParty-2.3.1/platforms/linux64Gcc/gperftools-svn/bin:/root/OpenFOAM/ThirdParty-2.3.1/platforms/linux64Gcc/ParaView-4.1.0/bin:/root/OpenFOAM/ThirdParty-2.3.1/platfo:/usr/local/sbin:/usr/sbin:/home/u1449908/.local/bin:/home/u1449908/bin:/home/u1449908/.local/bin:/home/u1449908/bin:/home/u1449908/.local/bin:/home/u1449908/bin
+CSF_SALOMEDS_ResourcesDefaults=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/kernel
+QTVERSION=5
+MMGT_REENTRANT=1
+HYBRIDPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+BLSURFPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+HDF5_DISABLE_VERSION_CHECK=1
+BOOSTDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520
+QT_IM_MODULE=xim
+GHS3DPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PVHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF
+SALOME_NETGENPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/netgenplugin
+SMESH_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+_=/usr/bin/env
+PWD=/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016
+NUMPY_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192
+HEXABLOCKPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PYQT_SIPS=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/share/sip
+DISABLE_FPE=1
+MESHGEMS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245
+MESHGEMSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245
+XMODIFIERS=@im=none
+XRDP_SESSION=1
+SALOMEMECA_TRANSLATOR_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170
+NETGENHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531
+MEDFICHIER_INSTALL_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321
+TFELHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300
+LANG=en_US.UTF-8
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_18
+CSF_PluginDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+PYTHONSTARTUP=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/pythonrc.py
+MED_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_HEXABLOCKPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexablockplugin
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+KDEDIRS=/usr
+LOADEDMODULES=
+CSF_ShHealingDefaults=/tmp/logs/u1449908/env_2832
+PV_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib
+HOMARD_EXE=homard
+PYTHONHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710
+SalomeAppConfig=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/gui:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/asterstudy:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/geom:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/smesh:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/paravis:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/med:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/yacs:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/jobmanager:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/homard:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/adao:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/eficas:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hybridplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/blsurfplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/europlexus:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexoticplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/netgenplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/ghs3dplugin::
+ASTER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOMEMECA_PLUGINS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public
+__place_holder__=0
+GL2PS_INSTALL_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620
+HISTCONTROL=ignoredups
+METISDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40,/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1
+TKDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513
+SALOME_BATCH=0
+NSPORT=no_port
+WISHEXECUTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin/wish8.5
+GENERICSOLVER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+HOME=/home/u1449908
+ASTER_STABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca
+PYQT_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560
+SHLVL=9
+SALOME_PLUGINS_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/plugins:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/plugins:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome
+ZCRACKSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Zcracks-287
+SALOME_BLSURFPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/blsurfplugin
+GEOM_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_trace=local
+MERCURIAL_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261
+SALOMEMECA_EXTRA_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_extra-201702_public
+LIBBATCH_NODEFILE=nodefile-EDGJdywE5g
+CSF_UnitsLexicon=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/UnitsAPI/Lexi_Expr.dat
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+OMNIORB_USER_PATH=/tmp
+PYTHONPATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/python2.7/site-packages/salome/shared_modules:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/python2.7/site-packages/salome:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/salome:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/bin/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/KERNEL_V8_3_0/bin/salome/appliskel:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages/omniidl_be:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Jinja-273/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/paraview/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scipy-0151/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/asterstudy:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0/share/salome/plugins/smesh/Verima:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/H5py-250/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/UiQT5:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/Editeur:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pkgconfig-110/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340/lib/python2.7/site-packages:/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages/omniidl_be:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Jinja-273/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/paraview/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scipy-0151/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/asterstudy:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0/share/salome/plugins/smesh/Verima:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/H5py-250/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/UiQT5:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/Editeur:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pkgconfig-110/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340/lib/python2.7/site-packages
+LOGNAME=u1449908
+ASTER_TMPDIR=/tmp
+BOOST_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520
+SALOMEPATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+ABSOLUTE_APPLI_PATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+QWT_INCLUDES=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/include
+QTLIB=/usr/lib64/qt-3.3/lib
+DSCCODE_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+EFICAS_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0
+XDG_DATA_DIRS=/home/u1449908/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-IXfEMBgefl,guid=c838ef1c98e862fbb6fc480b5c89f245
+UID=1050
+MODULES_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules
+MODULESHOME=/usr/share/Modules
+ECREVISSE_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Ecrevisse-322
+PV_MACRO_PATH=/home/u1449908/.config/salome/Macros
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SALOME_StdMeshersResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/smesh
+GUI_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SMESH_MeshersList=StdMeshers:HexoticPLUGIN:NETGENPlugin:BLSURFPlugin:HEXABLOCKPlugin:GHS3DPlugin:HYBRIDPlugin
+VTK_AUTOLOAD_PATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/paraview
+OPENTURNS_MODULE_CONF_FILE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_extra-201702_public/custom/config_file_template.py
+LIBXSLT_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128
+XDG_RUNTIME_DIR=/run/user/1050
+DISPLAY=:18.0
+LXML_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340
+GIBI_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008
+OMNIORBPY_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36
+CSF_MDTVTexturesDirectory=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/Textures
+QT_PLUGIN_PATH=
+LAPACKDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350
+CSF_GEOMDS_ResourcesDefaults=/tmp/logs/u1449908/env_2832
+XDG_CURRENT_DESKTOP=GNOME
+GTK_IM_MODULE=gtk-im-context-simple
+MED3HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321
+ASTER_ETC=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/etc
+MATPLOTLIB_HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143
+OMNIORB_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416
+PYTHON_INCLUDE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/include/python2.7
+COLORTERM=truecolor
+CSF_SHMessage=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/SHMessage
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}
+
+
+>>> 2019/03/14-14:07:21.255  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.255  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:808]
+cmd :
+bash -c ". /INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/profile.sh && env"
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.271  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:809]
+env_prof
+JOBMANAGER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+CSF_XmlOcafResource=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/XmlOcafResource
+SALOME_HexoticPLUGINResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexoticplugin
+SSH_AGENT_PID=15295
+HOMARD_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+EFICAS_NOUVEAU_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0
+XDG_SESSION_ID=c15
+LRELEASE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin/lrelease
+OMNIORB_USERS_PATH=/tmp
+HOSTNAME=INPUNHADHPCSRV
+EUROPLEXUS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ASTER_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170
+XRDP_SOCKET_PATH=/tmp/.xrdp
+ASTER_VERSION_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster
+QWTHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612
+FREETYPE_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411
+SALOMEMECA_MOFEM_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170
+ADD_TO_QT_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/plugins
+TCLDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513
+CSF_StandardDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+TERM=xterm-256color
+VTE_VERSION=5202
+XDG_MENU_PREFIX=gnome-
+SHELL=/bin/bash
+PARAVIS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PYGMENTS_HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202
+NSHOST=no_host
+HISTSIZE=1000
+LIBXML_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290
+DOCUTILS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012
+TOOLS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools
+QT_QPA_PLATFORM_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/plugins/platforms
+GEOM_PluginsList=BREPPlugin:STEPPlugin:IGESPlugin:STLPlugin:XAOPlugin:VTKPlugin:AdvancedGEOM
+CSF_XSMessage=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/XSMessage
+KERNEL_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+GRAPHVIZHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380
+GJS_DEBUG_OUTPUT=stderr
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/98e17fc0_4855_4922_b09a_94837d083379
+HOMARD_REP_EXE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_tool-118
+HOMARD_ASTER_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster
+MEDCOUPLING_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0
+CYTHON_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232
+PVVERSION=5.1
+PYUIC=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin/pyuic5
+SUITRoot=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome
+SALOME_GHS3DPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/ghs3dplugin
+LC_NUMERIC=C
+YACS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+TK_LIBRARY=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib/tk8.5
+ASTER_ELEMENTSDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster
+FREEIMAGE_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1
+DATA_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SAMPLES_V8_3_0
+PREFS_CATA_CF=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF
+APPLI=../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+QTDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611
+PARAVISADDONS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0
+QTINC=/usr/lib64/qt-3.3/include
+MISS3D_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+PYTHONEXECUTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin/python
+HDF5HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814
+CSF_SHMessageStd=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/SHMessageStd
+ASTER_OLDSTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280
+ADAO_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_HYBRIDPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hybridplugin
+SIP_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418
+QT_GRAPHICSSYSTEM_CHECKED=1
+IMSETTINGS_MODULE=none
+USER=u1449908
+GMSH_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110
+HEXABLOCK_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+LD_LIBRARY_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/libseq:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch_aster-604_aster6/SEQ/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/HOMARD_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/BLSURFPLUGIN_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/GENERICSOLVER_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/HYBRIDPLUGIN_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/YACS_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/HEXABLOCKPLUGIN_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/HEXABLOCK_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/PARAVIS_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/SMESH_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/MED_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/GEOM_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/ASTERSTUDY_edf_default/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/GUI_V8_3_asterstudy/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/KERNEL_V8_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Paravisaddons-V8_3_0-cm362-pv512/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Netgen-531-occ710p1-tcl8513-tix843-tk8513-togl17/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Meshgems-245/lib/Linux_64:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Libxslt-1128-xml290/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Gmsh-2110-cm362-la350-occ710p1-tbb424/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Opencv-231-cm362-py2710-tbb424/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Medcoupling-V8_3_0/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Qwt-612-qt561/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Paraview-v512_EDF-cm362-dox1831-gl2ps139-gr2380-hd1814-xml2290-py2710-qt561/lib/paraview-5.1:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Qt-5611/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Occ-710p1-freeimg3160-freetp2411-gl2ps139-tbb424/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Tbb-424/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Freeimage-3160p1/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Libxml2-290-py2710/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Libbatch-V2_3_1-cm362-py2710-sw208/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Cppunit-1132/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Gl2ps-139svn20160620EDFp1-cm362/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Graphviz-2380/lib/graphviz:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Graphviz-2380/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Boost-1520-py2710/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Freetype-2411/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Mumps4-4100_aster3/SEQ/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Mfront_stable-TFEL202/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Metis-40EDFp1/Lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Togl1.7:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Cgnslib-3134-cm362-hd1814/lib:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Omniorb-416-py2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Tix8.4.3:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Sip-418-py2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Tix8.4.3:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Togl1.7:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/Lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps4-4100_aster3/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib/graphviz:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tbb-424/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Opencv-231/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/lib/Linux_64:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome/lib:/lib64:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Tix8.4.3:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/Togl1.7:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/Lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps4-4100_aster3/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_oldstable-1280/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib/graphviz:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freeimage-3160p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tbb-424/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Opencv-231/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/lib/Linux_64:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/usr/lib/atlas-base/atlas:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome/lib:/lib64
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+CGNSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134
+CSF_StandardLiteDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+ROOT_SALOME=/INSTALLABLES/salome_meca-2017/V2017.0.2
+OMNIORB_CONFIG=/tmp/.omniORB_u1449908_INPUNHADHPCSRV_2832.cfg
+CASROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1
+ASTERSTUDY_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+GNOME_TERMINAL_SERVICE=:1.99
+ECREVISSE_OLD_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Ecrevisse_old-321
+SMESH_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0
+CPPUNIT_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132
+TCL_LIBRARY=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/lib/tcl8.5
+SALOMEMECA_PYUTILS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170
+DEBIANFORSALOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/debianForSalome
+SSH_AUTH_SOCK=/run/user/1050/keyring/ssh
+export FreeImage_version=3.16.0
+CSF_MDTVFontDirectory=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/FontMFT
+LIBBATCH_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1
+GMSH_BIN_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin
+CSF_UnitsDefinition=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/UnitsAPI/Units.dat
+SCOTCHDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/14921,unix/unix:/tmp/.ICE-unix/14921
+EFICAS_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+MPLCONFIGDIR=/home/u1449908/.config/salome/matplotlib-1.4.3
+ASTER_DATADIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/share/aster
+HexoticPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+XRDP_PULSE_SINK_SOCKET=xrdp_chansrv_audio_out_socket_18
+NETGENPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PULSE_SCRIPT=/etc/xrdp/pulse/default.pa
+GNOME_SHELL_SESSION_MODE=classic
+PREREQUISITES_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites
+PARAVIS_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0
+MAIL=/var/spool/mail/u1449908
+PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/outils:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/bin/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/bin/Linux_64:/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cgnslib-3134/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh_bin-2120Linux64/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Homard_aster-117_aster:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront_stable-TFEL202/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Miss3d-66_aster4:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scotch-5111/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Freetype-2411/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Graphviz-2380/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cppunit-1132/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qt-5611/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gmsh-2110/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245/bin/Linux_64:/usr/lib64/qt-3.3/bin:/usr/bin:/usr/lib64/openmpi/bin/:/usr/local/bin/:/usr/lib64/openmpi/bin/:/root/OpenFOAM/ThirdParty-2.3.1/platforms/linux64Gcc/gperftools-svn/bin:/root/OpenFOAM/ThirdParty-2.3.1/platforms/linux64Gcc/ParaView-4.1.0/bin:/root/OpenFOAM/ThirdParty-2.3.1/platfo:/usr/local/sbin:/usr/sbin:/home/u1449908/.local/bin:/home/u1449908/bin:/home/u1449908/.local/bin:/home/u1449908/bin:/home/u1449908/.local/bin:/home/u1449908/bin
+CSF_SALOMEDS_ResourcesDefaults=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/kernel
+QTVERSION=5
+MMGT_REENTRANT=1
+ASTER_LIBDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster
+HYBRIDPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+BLSURFPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+HDF5_DISABLE_VERSION_CHECK=1
+BOOSTDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520
+QT_IM_MODULE=xim
+GHS3DPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PVHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF
+SALOME_NETGENPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/netgenplugin
+SMESH_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PWD=/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016
+NUMPY_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192
+HEXABLOCKPLUGIN_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+PYQT_SIPS=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/share/sip
+DISABLE_FPE=1
+MESHGEMS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245
+MESHGEMSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Meshgems-245
+XMODIFIERS=@im=none
+XRDP_SESSION=1
+SALOMEMECA_TRANSLATOR_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170
+NETGENHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Netgen-531
+MEDFICHIER_INSTALL_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321
+TFELHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300
+LANG=en_US.UTF-8
+XRDP_PULSE_SOURCE_SOCKET=xrdp_chansrv_audio_in_socket_18
+CSF_PluginDefaults=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/StdResource
+PYTHONSTARTUP=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/pythonrc.py
+MED_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_HEXABLOCKPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexablockplugin
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+KDEDIRS=/usr
+LOADEDMODULES=
+CSF_ShHealingDefaults=/tmp/logs/u1449908/env_2832
+PV_PLUGIN_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/PARAVIS_V8_3_0/lib/paraview:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Paravisaddons-V8_3_0/lib
+HOMARD_EXE=homard
+PYTHONHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710
+SalomeAppConfig=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/gui:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/asterstudy:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/geom:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/smesh:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/paravis:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/med:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/yacs:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/jobmanager:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/homard:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/adao:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/eficas:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hybridplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/blsurfplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/europlexus:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/hexoticplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/netgenplugin:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/ghs3dplugin::
+ASTER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOMEMECA_PLUGINS_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public
+__place_holder__=0
+GL2PS_INSTALL_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Gl2ps-139svn20160620
+HISTCONTROL=ignoredups
+METISDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis-40,/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1
+TKDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513
+SALOME_BATCH=0
+NSPORT=no_port
+WISHEXECUTABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin/wish8.5
+GENERICSOLVER_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+HOME=/home/u1449908
+ASTER_STABLE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca
+PYQT_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560
+SHLVL=9
+SALOME_PLUGINS_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/plugins:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/plugins:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome
+ZCRACKSHOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Zcracks-287
+SALOME_BLSURFPluginResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/blsurfplugin
+ASTER_LOCALEDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/share/locale/aster
+GEOM_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SALOME_trace=local
+MERCURIAL_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261
+SALOMEMECA_EXTRA_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_extra-201702_public
+LIBBATCH_NODEFILE=nodefile-EDGJdywE5g
+CSF_UnitsLexicon=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/UnitsAPI/Lexi_Expr.dat
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+OMNIORB_USER_PATH=/tmp
+PYTHONPATH=.:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pkgconfig-110-py2710/lib/python2.7/site-packages/pkgconfig-1.1.0-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/H5py-250-cyt0232-hdf51814-num192-py2710-set06c11/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/six-1.11.0-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/lib/python2.7/site-packages/matplotlib-1.4.3-py2.7-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/pyparsing-2.2.0-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/pytz-2017.2-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/python_dateutil-2.6.1-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Jinja-273-py2710-set06c11/lib/python2.7/site-packages/Jinja2-2.7.3-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Jinja-273-py2710-set06c11/MarkupSafe-1.0-py2.7-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pygments-202-py2710-set06c11/lib/python2.7/site-packages/Pygments-2.0.2-py2.7.egg:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pkgconfig-110-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/ASTER_20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/H5py-250-cyt0232-hdf51814-num192-py2710-set06c11/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Cython-0232-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/SMESH_V8_3_0/share/salome/plugins/smesh/Verima:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/ASTERSTUDY_edf_default/lib/python2.7/site-packages/asterstudy:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/modules/install/ASTERSTUDY_edf_default/lib/python2.7/site-packages/salome:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Medcoupling-V8_3_0/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Scipy-0151-la350-nu192-py2710-sw208/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Paraview-v512_EDF-cm362-dox1831-gl2ps139-gr2380-hd1814-xml2290-py2710-qt561/lib/paraview-5.1/site-packages/paraview/vtk:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Paraview-v512_EDF-cm362-dox1831-gl2ps139-gr2380-hd1814-xml2290-py2710-qt561/lib/paraview-5.1/site-packages/vtk:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Paraview-v512_EDF-cm362-dox1831-gl2ps139-gr2380-hd1814-xml2290-py2710-qt561/lib/paraview-5.1/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Paraview-v512_EDF-cm362-dox1831-gl2ps139-gr2380-hd1814-xml2290-py2710-qt561/lib/paraview-5.1:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pyqt-560-py2710-qt561-sip418/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Jinja-273-py2710-set06c11/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Libxml2-290-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Libbatch-V2_3_1-cm362-py2710-sw208/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Omniorbpy-36-orb416-py2710/lib/python2.7/site-packages/omniidl_be:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Omniorbpy-36-orb416-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Docutils-012-py2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pygments-202-py2710-set06c11/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Omniorb-416-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Sip-418-py2710/lib/python2.7/site-packages:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Eficas_nouveau-V8_3_0-cm362-pyqt560-py2710-qt561-sip418:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Eficas_nouveau-V8_3_0-cm362-pyqt560-py2710-qt561-sip418/UiQT5:/home/A21173/smeca/yamm_build/V2017_0_2_build/V2017_public/tools/install/Eficas_nouveau-V8_3_0-cm362-pyqt560-py2710-qt561-sip418/Editeur:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Omniorbpy-36-orb416-py2710/lib/python2.7/site-packages/omniORB/COS:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/python2.7/site-packages/salome/shared_modules:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/python2.7/site-packages/salome:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/salome:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/bin/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/KERNEL_V8_3_0/bin/salome/appliskel:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages/omniidl_be:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Jinja-273/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/paraview/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scipy-0151/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/asterstudy:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0/share/salome/plugins/smesh/Verima:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/H5py-250/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/UiQT5:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/Editeur:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pkgconfig-110/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340/lib/python2.7/site-packages:/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pygments-202/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mercurial-261/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Numpy-192/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_pyutils-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Docutils-012/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36/lib/python2.7/site-packages/omniidl_be:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Libbatch-V2_3_1/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxml2-290/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Jinja-273/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pyqt-560/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Paraview-v512_EDF/lib/paraview-5.1/site-packages/paraview/vtk:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Scipy-0151/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medcoupling-V8_3_0/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/ASTERSTUDY_201702/lib/python2.7/site-packages/asterstudy:/INSTALLABLES/salome_meca-2017/V2017.0.2/modules/SMESH_V8_3_0/share/salome/plugins/smesh/Verima:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Cython-0232/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/H5py-250/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/UiQT5:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0/Editeur:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Pkgconfig-110/lib/python2.7/site-packages:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_plugins-20170_public/lib/python2.7/site-packages/salome/CF:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_mofem-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_translator-20170/lib/python2.7/site-packages/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340/lib/python2.7/site-packages
+LOGNAME=u1449908
+ASTER_TMPDIR=/tmp
+BOOST_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Boost-1520
+SALOMEPATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+ABSOLUTE_APPLI_PATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+QWT_INCLUDES=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Qwt-612/include
+QTLIB=/usr/lib64/qt-3.3/lib
+DSCCODE_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+EFICAS_ROOT=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Eficas_nouveau-V8_3_0
+XDG_DATA_DIRS=/home/u1449908/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-IXfEMBgefl,guid=c838ef1c98e862fbb6fc480b5c89f245
+UID=1050
+MODULES_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/modules
+MODULESHOME=/usr/share/Modules
+ECREVISSE_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Ecrevisse-322
+PV_MACRO_PATH=/home/u1449908/.config/salome/Macros
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SALOME_StdMeshersResources=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/share/salome/resources/smesh
+GUI_ROOT_DIR=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2
+SMESH_MeshersList=StdMeshers:HexoticPLUGIN:NETGENPlugin:BLSURFPlugin:HEXABLOCKPlugin:GHS3DPlugin:HYBRIDPlugin
+VTK_AUTOLOAD_PATH=/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/lib/paraview
+OPENTURNS_MODULE_CONF_FILE=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Salomemeca_extra-201702_public/custom/config_file_template.py
+LIBXSLT_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Libxslt-1128
+XDG_RUNTIME_DIR=/run/user/1050
+DISPLAY=:18.0
+LXML_ROOT_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lxml-340
+GIBI_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Gibi-20008
+OMNIORBPY_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorbpy-36
+CSF_MDTVTexturesDirectory=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/Textures
+QT_PLUGIN_PATH=
+LAPACKDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350
+CSF_GEOMDS_ResourcesDefaults=/tmp/logs/u1449908/env_2832
+XDG_CURRENT_DESKTOP=GNOME
+GTK_IM_MODULE=gtk-im-context-simple
+MED3HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321
+ASTER_ETC=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/etc
+MATPLOTLIB_HOME=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Matplotlib-143
+OMNIORB_DIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416
+PYTHON_INCLUDE=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/include/python2.7
+COLORTERM=truecolor
+CSF_SHMessage=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Occ-710p1/src/SHMessage
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}
+_=/usr/bin/env
+
+
+>>> 2019/03/14-14:07:21.273  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : PYTHONPATH=.:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Pkgconfig-110-py2710/lib/python2.7/site-packages/pkgconfig-1.1.0-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/H5py-250-cyt0232-hdf51814-num192-py2710-set06c11/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/six-1.11.0-py2.7.egg:/home/A21173/smeca/yamm_build/V2017_0_2_build/prerequisites/install/Matplotlib-143EDFp1-num192-pyqt560-py2710-set06c11/lib/python2.7/site-packages/matplotlib-1.4.3-py2.7-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2017_0
+[...]
+
+>>> 2019/03/14-14:07:21.274  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : ASTER_LOCALEDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/share/locale/aster
+
+>>> 2019/03/14-14:07:21.274  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : ASTER_DATADIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/share/aster
+
+>>> 2019/03/14-14:07:21.274  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : ASTER_LIBDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster
+
+>>> 2019/03/14-14:07:21.275  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : LD_LIBRARY_PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Hdf5-1814/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Lapack-350/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Medfichier-321/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Metis_aster-510_aster1/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mumps-511_aster2/SEQ/libseq:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/lib:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisite
+[...]
+
+>>> 2019/03/14-14:07:21.275  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : ASTER_ELEMENTSDIR=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster
+
+>>> 2019/03/14-14:07:21.275  [AddToEnv@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:817]
+AddToEnv set : PATH=/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Mfront-TFEL300/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/outils:/home/u1449908/../../INSTALLABLES/salome_meca-2017/appli_V2017.0.2/bin/salome:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tcl-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Tk-8513/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Python-2710/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Sip-418/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/Omniorb-416/bin:/INSTALLABLES/salome_meca-2017/V2017.0.2/prerequisites/H
+[...]
+
+>>> 2019/03/14-14:07:21.276  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:201]
+set_rep_trav() > local=/tmp/u1449908-INPUNHADHPCSRV-interactif.42066, global=/tmp/u1449908-INPUNHADHPCSRV-interactif.42066
+
+>>> 2019/03/14-14:07:21.282  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2019/03/14-14:07:21.282  [_dbg@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2019/03/14-14:07:21.283  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:208]
+source list : ('/tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066',)
+destination : export
+
+>>> 2019/03/14-14:07:21.283  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:208]
+cmd :
+cp -L -r /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066 export
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.294  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:221]
+source list : ('/tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066',)
+destination : /tmp/u1449908-INPUNHADHPCSRV-interactif.42066/42066.export
+
+>>> 2019/03/14-14:07:21.294  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:221]
+cmd :
+cp -L -r /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066 /tmp/u1449908-INPUNHADHPCSRV-interactif.42066/42066.export
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.306  [RunAster@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py:402]
+Start make_etude/make_env/make_dbg action
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/u1449908-INPUNHADHPCSRV-interactif.42066
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+>>> 2019/03/14-14:07:21.308  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+source list : (u'/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/RunCase_2_stress_calc.comm',)
+destination : fort.1.1
+
+>>> 2019/03/14-14:07:21.309  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+cmd :
+cp -L -r /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/RunCase_2_stress_calc.comm fort.1.1
+background : False
+follow_output : False
+copying .../u1449908-INPUNHADHPCSRV-Thu-14-140720.016/RunCase_2_stress_calc.comm...
+                                                                        
+>>> 2019/03/14-14:07:21.320  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.320  [_check_filetype@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:708]
+cmd :
+file fort.1.1
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.334  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+source list : (u'/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/cant_tipload.rmed',)
+destination : fort.80
+
+>>> 2019/03/14-14:07:21.335  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+cmd :
+cp -L -r /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/cant_tipload.rmed fort.80
+background : False
+follow_output : False
+[  OK  ]
+copying .../u1449908-INPUNHADHPCSRV-Thu-14-140720.016/cant_tipload.rmed...
+                                                                        
+>>> 2019/03/14-14:07:21.347  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.347  [_check_filetype@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:708]
+cmd :
+file fort.80
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.357  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+source list : (u'/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/_ExportedFromSalomeObject_0_1_2_3.med',)
+destination : fort.20
+
+>>> 2019/03/14-14:07:21.358  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+cmd :
+cp -L -r /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/_ExportedFromSalomeObject_0_1_2_3.med fort.20
+background : False
+follow_output : False
+[  OK  ]
+copying .../u1449908-INPUNHADHPCSRV-Thu-14-140720.016/_ExportedFromSalomeObject_0_1_2_3.med...
+                                                                        
+>>> 2019/03/14-14:07:21.368  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.368  [_check_filetype@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:708]
+cmd :
+file fort.20
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.376  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+source list : (u'/tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage1',)
+destination : base-stage1
+
+>>> 2019/03/14-14:07:21.377  [copyfileD@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:566]
+cmd :
+cp -L -r /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage1 base-stage1
+background : False
+follow_output : False
+[  OK  ]
+copying .../u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage1...    
+>>> 2019/03/14-14:07:21.393  [Gunzip@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:560]
+cmd :
+gzip -d base-stage1/pick.1.gz
+background : False
+follow_output : False
+[  OK  ]
+decompressing base-stage1/pick.1.gz                                     
+>>> 2019/03/14-14:07:21.438  [Gunzip@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:560]
+cmd :
+gzip -d base-stage1/glob.1.gz
+background : False
+follow_output : False
+[  OK  ]
+decompressing base-stage1/glob.1.gz                                     
+>>> 2019/03/14-14:07:21.699  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:102]
+version supports: waf (True), nosuperv (False), orbinitref (True), numthreads (True)
+[  OK  ]
+<INFO> Parameters : memory 2048 MB - time limit 900 s
+
+--------------------------------------------------------------------------------
+ Content of /tmp/u1449908-INPUNHADHPCSRV-interactif.42066 before execution
+
+
+>>> 2019/03/14-14:07:21.706  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.707  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:281]
+cmd :
+ls -la
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:21.719  [SetLimit@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:946]
+['core', 'RLIMIT_CORE', [-1, -1]]
+
+>>> 2019/03/14-14:07:21.720  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:342]
+source list : ('fort.1.1',)
+destination : fort.1
+
+>>> 2019/03/14-14:07:21.720  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:342]
+cmd :
+cp -L -r fort.1.1 fort.1
+background : False
+follow_output : False
+total 42352
+drwx------    4 u1449908 users     4096 Mar 14 14:07 .
+drwxrwxrwt. 319 root     root     81920 Mar 14 14:07 ..
+-rw-r--r--    1 u1449908 users     1219 Mar 14 14:07 42066.export
+drwxr-xr-x    2 u1449908 users     4096 Mar 14 14:07 base-stage1
+-rw-r--r--    1 u1449908 users     3501 Mar 14 14:07 config.txt
+-rw-r--r--    1 u1449908 users      363 Mar 14 14:07 fort.1.1
+-rw-r--r--    1 u1449908 users    10403 Mar 14 14:07 fort.20
+-rw-r--r--    1 u1449908 users    21113 Mar 14 14:07 fort.80
+-rw-r--r--    1 u1449908 users 38502408 Mar 14 14:07 glob.1
+-rw-r--r--    1 u1449908 users  4714297 Mar 14 14:07 pick.1
+drwxr-xr-x    2 u1449908 users     4096 Mar 14 14:07 REPE_OUT
+
+
+--------------------------------------------------------------------------------
+ Code_Aster run
+
+<INFO> Command line 1 :
+<INFO> /INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/bin/aster /INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster/Execution/E_SUPERV.py -commandes fort.1 --num_job=42066 --mode=interactif --rep_outils=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/outils --rep_mat=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/materiau --rep_dex=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/datg --numthreads=32 --suivi_batch --memjeveux=256.0 --tpmax=900.0
+
+>>> 2019/03/14-14:07:21.732  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:21.733  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:373]
+cmd :
+( /INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/bin/aster /INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster/Execution/E_SUPERV.py -commandes fort.1 --num_job=42066 --mode=interactif --rep_outils=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/outils --rep_mat=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/materiau --rep_dex=/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/../Code_aster_stable-v134_smeca/share/aster/datg --numthreads=32 --suivi_batch --memjeveux=256.0 --tpmax=900.0 ; echo EXECUTION_CODE_ASTER_EXIT_42066=$? ) | tee fort.6 ; exit `grep -a EXECUTION_CODE_ASTER_EXIT_42066 fort.6 | head -1 | sed -e 's/EXECUTION_CODE_ASTER_EXIT_42066=//'`
+background : False
+follow_output : True
+/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_stable-v134_smeca/lib/aster/aster_settings.py:244: DeprecationWarning: this command line option is deprecated : --rep_outils
+  coreopts.parse_args(argv or sys.argv)
+# ------------------------------------------------------------------------------------------
+# Impression du contenu du fichier de commandes à exécuter :
+# ------------------------------------------------------------------------------------------
+POURSUITE()
+
+
+stress = CALC_CHAMP(
+    CARA_ELEM=elemprop,
+    CHAM_MATER=fieldmat,
+    CONTRAINTE=('EFGE_ELNO', 'SIEF_ELNO', 'SIGM_ELGA'),
+    MODELE=model,
+    RESULTAT=reslin,
+    TOUT_ORDRE='OUI'
+)
+
+IMPR_RESU(FORMAT='MED', RESU=_F(MAILLAGE=mesh, RESULTAT=stress), UNITE=2)
+
+IMPR_RESU(FORMAT='RESULTAT', RESU=_F(MAILLAGE=mesh, RESULTAT=stress), UNITE=3)
+
+FIN()
+# ------------------------------------------------------------------------------------------
+
+  Ouverture en écriture du fichier ./vola.1
+                                                                                
+                                                                                
+              -- CODE_ASTER -- VERSION : EXPLOITATION (stable) --               
+                                                                                
+                     Version 13.4.0 modifiée le 24/10/2017                      
+                     révision d3b9d70df6c4 - branche 'v13'                      
+                         Copyright EDF R&D 1991 - 2019                          
+                                                                                
+                    Exécution du : Thu Mar 14 14:07:22 2019                     
+                       Nom de la machine : INPUNHADHPCSRV                       
+                              Architecture : 64bit                              
+                          Type de processeur : x86_64                           
+Système d'exploitation : Linux Red Hat Enterprise Linux Server 7.6 Maipo 3.10.0-957.5.1.el7.x86_64
+                        Langue des messages : en (UTF-8)                        
+                                                                                
+                           Version de Python : 2.7.10                           
+                            Version de NumPy : 1.9.2                            
+                           Parallélisme MPI : inactif                           
+                          Parallélisme OpenMP : actif                           
+                       Nombre de processus utilisés : 32                        
+                     Version de la librairie HDF5 : 1.8.14                      
+                      Version de la librairie MED : 3.2.1                       
+                     Version de la librairie MFront : 3.0.0                     
+                     Version de la librairie MUMPS : 5.1.1                      
+                        Librairie PETSc : non disponible                        
+                     Version de la librairie SCOTCH : 6.0.4                     
+
+                  Mémoire limite pour l'exécution : 2048.00 Mo                  
+                  consommée par l'initialisation : 1623.61 Mo                   
+                  par les objets du jeu de commandes : 0.00 Mo                  
+                 reste pour l'allocation dynamique : 422.66 Mo                  
+                Taille limite des fichiers d'échange : 12.00 Go                 
+                                                                                
+
+  Valeur initiale du temps CPU maximum =   900 secondes
+  Valeur du temps CPU maximum passé aux commandes =   810 secondes
+  Réserve CPU prévue = 90 secondes
+
+  Ouverture en lecture du fichier ./glob.1
+
+     Nom de la base                          :  GLOBALE
+     Créée avec la version                   :  13.04.00
+     Nombre d'enregistrements utilisés       :  47
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre d'identificateurs utilisés       :  397
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  19 %
+
+  Ouverture en lecture du fichier ./glob.1
+
+  Ouverture en écriture du fichier ./vola.1
+
+  Fin de lecture (durée  0.000016  s.) 
+
+ Lecture du fichier pick.1...
+
+  La signature de la base relue est conforme à celle attendue (à l'adresse 0) :
+    49e310b3f627cb695bffdf719cea4689ac97ccfc
+
+  Liste des concepts issus de la base :
+    Nom         Type du concept
+    BC          char_meca               
+    reslin      evol_elas               
+    load0       char_meca               
+    elemprop    cara_elem               
+    mesh        maillage_sdaster        
+    model       modele_sdaster          
+    steel       mater_sdaster           
+    fieldmat    cham_mater              
+
+  L'exécution précédente s'est terminée correctement.
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0001            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  POURSUITE(INFO=1,
+            CODE='NON',
+            PAR_LOT='OUI',
+            IMPR_MACRO='NON',
+            RESERVE_CPU=_F(BORNE=900,),
+            MEMOIRE=_F(TAILLE_BLOC=800.0,
+                       TAILLE_GROUP_ELEM=1000,),
+            DEBUG=_F(JEVEUX='NON',
+                     JXVERI='NON',
+                     HIST_ETAPE='NON',
+                     SDVERI='NON',),
+            FORMAT_HDF='NON',
+            MESURE_TEMPS=_F(MOYENNE='NON',
+                            NIVE_DETAIL=1,),
+            )
+
+  # Mémoire (Mo) :  1693.30 /  1685.67 /     7.58 /     7.58 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0001   user+syst:        0.00s (syst:        0.00s, elaps:        0.01s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0002            Concept de type : evol_elas
+  # ------------------------------------------------------------------------------------------
+  stress = CALC_CHAMP(CARA_ELEM=elemprop,
+                      CHAM_MATER=fieldmat,
+                      RESULTAT=reslin,
+                      TOUT_ORDRE='OUI',
+                      MODELE=model,
+                      PRECISION=1.E-06,
+                      CONTRAINTE=('EFGE_ELNO', 'SIEF_ELNO', 'SIGM_ELGA'),
+                      INFO=1,
+                      CRITERE='RELATIF',)
+
+   
+   !--------------------------------------------------------------------------------------------------!
+   ! <A> <CALCULEL2_89>                                                                               !
+   !                                                                                                  !
+   !  Alarme utilisateur :                                                                            !
+   !    Le champ  SIGM_ELGA  n'a pas pu être calculé.                                                 !
+   !                                                                                                  !
+   !  Risques & conseils :                                                                            !
+   !    * Si le champ est un champ par éléments, c'est que le calcul élémentaire n'est pas disponible !
+   !      pour les éléments finis utilisés. Cela peut se produire soit parce que ce                   !
+   !      calcul n'a pas été encore programmé, soit parce que ce calcul n'a pas de sens.              !
+   !      Par exemple, le champ EFGE_ELNO n'a pas de sens pour les éléments de la modélisation '3D'.  !
+   !    * Si le champ est un champ aux noeuds (XXXX_NOEU), cela veut dire que le champ XXXX_ELNO      !
+   !      n'existe pas sur les éléments spécifiés.                                                    !
+   !      Par exemple, le calcul de SIGM_NOEU sur les éléments de bord est impossible.                !
+   !                                                                                                  !
+   !                                                                                                  !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                                   !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                                           !
+   !--------------------------------------------------------------------------------------------------!
+   
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.28      0.22      0.01
+  # Mémoire (Mo) :  1960.86 /  1960.82 /    32.85 /    32.42 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0002   user+syst:        0.77s (syst:        0.60s, elaps:        0.07s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0003            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  IMPR_RESU(FORMAT='MED',
+            RESU=_F(RESULTAT=stress,
+                    MAILLAGE=mesh,
+                    INFO_MAILLAGE='NON',
+                    IMPR_NOM_VARI='OUI',),
+            UNITE=2,
+            INFO=1,
+            PROC0='OUI',)
+
+  # Mémoire (Mo) :  1961.32 /  1960.82 /    32.85 /    32.42 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0003   user+syst:        1.50s (syst:        1.15s, elaps:        0.04s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0004            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  IMPR_RESU(FORMAT='RESULTAT',
+            UNITE=3,
+            RESU=_F(MAILLAGE=mesh,
+                    RESULTAT=stress,
+                    IMPR_COOR='NON',
+                    FORMAT_R='1PE21.14',
+                    FORM_TABL='NON',),
+            INFO=1,
+            PROC0='OUI',)
+
+  # Mémoire (Mo) :  1961.32 /  1960.82 /    32.85 /    32.42 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0004   user+syst:        0.67s (syst:        0.52s, elaps:        0.02s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0005            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  FIN(INFO_RESU='OUI',
+      RETASSAGE='NON',
+      FORMAT_HDF='NON',
+      PROC0='OUI',)
+
+   
+   !-------------------------------------------------------------------------!
+   ! <I> <CATAMESS_89>                                                       !
+   !                                                                         !
+   !     Liste des alarmes émises lors de l'exécution du calcul.             !
+   !                                                                         !
+   !     Les alarmes que vous avez choisies d'ignorer sont précédées de (*). !
+   !     Nombre d'occurrences pour chacune des alarmes :                     !
+   !            CALCULEL2_89         émise    1 fois                         !
+   !-------------------------------------------------------------------------!
+   
+
+ ======>
+
+ STRUCTURE DU CONCEPT reslin   CALCULE POUR 1 NUMERO D'ORDRE
+
+ LISTE DES NOMS SYMBOLIQUES:
+ ! ---------- !----------------!----------------!
+ ! NUME_ORDRE !      DEPL      !   SIEF_ELGA    !
+ ! ---------- !----------------!----------------!
+ !          1 !     DEPL_R     !     SIEF_R     !
+ ! ---------- !----------------!----------------!
+
+ LISTE DES NOMS DE VARIABLES D'ACCES:
+                                      INST             DE TYPE  R
+
+ LISTE DES NOMS DE PARAMETRES:
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ! NUME_ORDRE !    CARAELEM    !    CHAMPMAT    !     EXCIT      !   ITER_GCPC    !    METHODE     !     MODELE     !     RENUM      !    STOCKAGE    !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ !          1 !       K8       !       K8       !      K24       !       I        !      K16       !       K8       !      K16       !      K16       !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+
+ ======>
+
+ STRUCTURE DU CONCEPT stress   CALCULE POUR 1 NUMERO D'ORDRE
+
+ LISTE DES NOMS SYMBOLIQUES:
+ ! ---------- !----------------!----------------!
+ ! NUME_ORDRE !   EFGE_ELNO    !   SIEF_ELNO    !
+ ! ---------- !----------------!----------------!
+ !          1 !     SIEF_R     !     SIEF_R     !
+ ! ---------- !----------------!----------------!
+
+ LISTE DES NOMS DE VARIABLES D'ACCES:
+                                      INST             DE TYPE  R
+
+ LISTE DES NOMS DE PARAMETRES:
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ! NUME_ORDRE !    CARAELEM    !    CHAMPMAT    !     EXCIT      !   ITER_GCPC    !    METHODE     !     MODELE     !     RENUM      !    STOCKAGE    !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ !          1 !       K8       !       K8       !      K24       !       I        !      K16       !       K8       !      K16       !      K16       !
+ ! ---------- !----------------!----------------!----------------!----------------!----------------!----------------!----------------!----------------!
+ ---------------------------------------------------------------------------
+ Concepts de la base: G
+    Nom       Type                 Taille (Mo)         Nombre      Nombre de
+                                                     d'objets       segments
+    TOTAL                                27.68            202            365
+  
+    mesh       MAILLAGE_SDASTER           0.01             36             60
+    model      MODELE_SDASTER             0.00              8             13
+    elemprop   CARA_ELEM                  0.01             22             42
+    steel      MATER_SDASTER              0.00              5              5
+    fieldmat   CHAM_MATER                 0.00              6             11
+    BC         CHAR_MECA                  0.01             23             43
+    load0      CHAR_MECA                  0.00             14             29
+    reslin     EVOL_ELAS                  0.02             25             34
+    stress     EVOL_ELAS                  0.02             18             22
+    &FOZERO                               0.00              2              2
+    &&_NUM_C                              0.00              1              1
+    &CATA.AC                              0.00              2              4
+    &CATA.CL                              0.86              1              3
+    &CATA.GD                              0.14              4             11
+    &CATA.ME                              0.20              2              4
+    &CATA.OP                              0.32              4             19
+    &CATA.PH                              0.00              1              1
+    &CATA.PR                              0.00              2              4
+    &CATA.TE                             26.07             17             42
+    &CATA.TH                              0.01              2              4
+    &CATA.TM                              0.01              7             11
+ ---------------------------------------------------------------------------
+
+
+     Nom de la base                          :  GLOBALE
+     Nombre d'enregistrements utilisés       :  48
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  103
+     Volume des accès en lecture             :         80.47 Mo.
+     Nombre total d'accès en écriture        :  16
+     Volume des accès en écriture            :         12.50 Mo.
+     Nombre d'identificateurs utilisés       :  419
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  20 %
+
+
+     Nom de la base                          :  VOLATILE
+     Nombre d'enregistrements utilisés       :  3
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  0
+     Volume des accès en lecture             :          0.00 Mo.
+     Nombre total d'accès en écriture        :  4
+     Volume des accès en écriture            :          3.12 Mo.
+     Nombre d'identificateurs utilisés       :  264
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  13 %
+
+ <FIN> Arrêt normal dans "FIN".
+  
+ <I>       FERMETURE DES BASES EFFECTUEE
+  
+   STATISTIQUES CONCERNANT L'ALLOCATION DYNAMIQUE :
+     TAILLE CUMULEE MAXIMUM            :                   33  Mo.
+     TAILLE CUMULEE LIBEREE            :                    4  Mo.
+     NOMBRE TOTAL D'ALLOCATIONS        :                 3215
+     NOMBRE TOTAL DE LIBERATIONS       :                 3215
+     APPELS AU MECANISME DE LIBERATION :                    0
+     TAILLE MEMOIRE CUMULEE RECUPEREE  :                    0  Mo.
+     VOLUME DES LECTURES               :                    0  Mo.
+     VOLUME DES ECRITURES              :                    0  Mo.
+  
+   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      32.42 Mo
+     - IMPOSE DE NOMBREUX ACCES DISQUE
+     - RALENTIT LA VITESSE D'EXECUTION
+   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :      32.85 Mo
+     - LIMITE LES ACCES DISQUE
+     - AMELIORE LA VITESSE D'EXECUTION
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :    1961.32 Mo
+     - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
+       LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
+  
+ <I>       FIN D'EXECUTION LE : JE-14-MARS-2019 14:07:23
+
+
+  <I> Informations sur les temps d'exécution
+      Temps cpu user total                    2.10 s
+      Temps cpu systeme total                 3.21 s
+      Temps elapsed total                     1.66 s
+      Temps restant                         808.34 s
+
+
+  La signature de la base sauvegardée est (à l'adresse 0) :
+    c65e7d8d79bb4ae78a77bdd56fc86394c14322ca
+
+ ********************************************************************************
+ * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+ ********************************************************************************
+ * init (jdc)               :       1.24 :       0.24 :       1.48 :       1.49 *
+ *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
+ *  . exec_compile          :       0.76 :       0.14 :       0.90 :       0.92 *
+ *  . report                :       0.00 :       0.00 :       0.00 :       0.00 *
+ *  . build                 :       0.00 :       0.00 :       0.00 :       0.00 *
+ * POURSUITE                :       0.00 :       0.00 :       0.00 :       0.01 *
+ * CALC_CHAMP               :       0.17 :       0.60 :       0.77 :       0.07 *
+ * IMPR_RESU                :       0.35 :       1.15 :       1.50 :       0.04 *
+ * IMPR_RESU                :       0.15 :       0.52 :       0.67 :       0.02 *
+ * FIN                      :       0.18 :       0.67 :       0.85 :       0.02 *
+ *  . part Superviseur      :       1.29 :       0.39 :       1.68 :       1.51 *
+ *  . part Fortran          :       0.81 :       2.80 :       3.61 :       0.15 *
+ ********************************************************************************
+ * TOTAL_JOB                :       2.10 :       3.21 :       5.31 :       1.66 *
+ ********************************************************************************
+
+EXECUTION_CODE_ASTER_EXIT_42066=0
+
+>>> 2019/03/14-14:07:26.220  [_diag_erre@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1434]
+n_debut=1, n_fin=1, mess=False : ok=True
+
+>>> 2019/03/14-14:07:26.220  [_diag_erre@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1435]
+alarm=False, errs=False, fatal=False, exitcode=0
+
+>>> 2019/03/14-14:07:26.220  [getDiag@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1539]
+Fichier : fort.9
+_diag_erre : OK
+
+>>> 2019/03/14-14:07:26.222  [getDiag@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1555]
+Fichier : fort.8
+_diag_resu : <A>_ALARM
+
+>>> 2019/03/14-14:07:26.225  [_diag_erre@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1434]
+n_debut=1, n_fin=0, mess=True : ok=True
+
+>>> 2019/03/14-14:07:26.225  [_diag_erre@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1435]
+alarm=True, errs=False, fatal=False, exitcode=0
+
+>>> 2019/03/14-14:07:26.225  [getDiag@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/build.py:1557]
+Fichier : fort.6
+_diag_erre : <A>_ALARM
+<INFO> Code_Aster run ended, diagnostic : <A>_ALARM
+
+--------------------------------------------------------------------------------
+ Content of /tmp/u1449908-INPUNHADHPCSRV-interactif.42066 after execution
+
+
+>>> 2019/03/14-14:07:26.226  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:26.226  [execute@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:488]
+cmd :
+ls -la . REPE_OUT
+background : False
+follow_output : False
+.:
+total 44840
+drwx------    4 u1449908 users     4096 Mar 14 14:07 .
+drwxrwxrwt. 320 root     root     81920 Mar 14 14:07 ..
+-rw-r--r--    1 u1449908 users     1219 Mar 14 14:07 42066.export
+drwxr-xr-x    2 u1449908 users     4096 Mar 14 14:07 base-stage1
+-rw-r--r--    1 u1449908 users     3501 Mar 14 14:07 config.txt
+-rw-r--r--    1 u1449908 users      363 Mar 14 14:07 fort.1
+-rw-r--r--    1 u1449908 users      363 Mar 14 14:07 fort.1.1
+-rw-r--r--    1 u1449908 users        0 Mar 14 14:07 fort.15
+-rw-r--r--    1 u1449908 users    18953 Mar 14 14:07 fort.2
+-rw-r--r--    1 u1449908 users    10403 Mar 14 14:07 fort.20
+-rw-r--r--    1 u1449908 users    19747 Mar 14 14:07 fort.3
+-rw-r--r--    1 u1449908 users    20358 Mar 14 14:07 fort.6
+-rw-r--r--    1 u1449908 users     6528 Mar 14 14:07 fort.8
+-rw-r--r--    1 u1449908 users    21113 Mar 14 14:07 fort.80
+-rw-r--r--    1 u1449908 users     2765 Mar 14 14:07 fort.9
+-rw-r--r--    1 u1449908 users 39321608 Mar 14 14:07 glob.1
+-rw-r--r--    1 u1449908 users       44 Mar 14 14:07 info_cpu
+-rw-r--r--    1 u1449908 users  4713986 Mar 14 14:07 pick.1
+drwxr-xr-x    2 u1449908 users     4096 Mar 14 14:07 REPE_OUT
+-rw-r--r--    1 u1449908 users  2457608 Mar 14 14:07 vola.1
+
+REPE_OUT:
+total 8
+drwxr-xr-x 2 u1449908 users 4096 Mar 14 14:07 .
+drwx------ 4 u1449908 users 4096 Mar 14 14:07 ..
+
+
+--------------------------------------------------------------------------------
+ Size of bases
+
+<INFO> size of vola.1 :      2457608 bytes
+<INFO> size of glob.1 :     39321608 bytes
+<INFO> size of pick.1 :      4713986 bytes
+
+--------------------------------------------------------------------------------
+ Copying results
+
+
+>>> 2019/03/14-14:07:26.244  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+source list : ('fort.2',)
+destination : /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/stress.rmed
+
+>>> 2019/03/14-14:07:26.244  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+cmd :
+cp -L -r fort.2 /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/stress.rmed
+background : False
+follow_output : False
+copying .../fort.2...                                                   
+>>> 2019/03/14-14:07:26.256  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+source list : ('fort.3',)
+destination : /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/stress.resu
+
+>>> 2019/03/14-14:07:26.256  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+cmd :
+cp -L -r fort.3 /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/stress.resu
+background : False
+follow_output : False
+[  OK  ]
+copying .../fort.3...                                                   
+>>> 2019/03/14-14:07:26.269  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+source list : ('fort.6',)
+destination : /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/message
+
+>>> 2019/03/14-14:07:26.270  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+cmd :
+cp -L -r fort.6 /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/message
+background : False
+follow_output : False
+[  OK  ]
+copying .../fort.6...                                                   
+>>> 2019/03/14-14:07:26.280  [Gzip@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:552]
+cmd :
+gzip glob.1
+background : False
+follow_output : False
+[  OK  ]
+compressing glob.1                                                      
+>>> 2019/03/14-14:07:27.451  [Gzip@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:552]
+cmd :
+gzip pick.1
+background : False
+follow_output : False
+[  OK  ]
+compressing pick.1                                                      
+>>> 2019/03/14-14:07:27.646  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+source list : ('glob.1.gz', 'pick.1.gz')
+destination : /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage2
+
+>>> 2019/03/14-14:07:27.646  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+cmd :
+cp -L -r glob.1.gz /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage2
+background : False
+follow_output : False
+[  OK  ]
+copying .../glob.1.gz...                                                
+>>> 2019/03/14-14:07:27.662  [copyfileR@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execution.py:665]
+cmd :
+cp -L -r pick.1.gz /tmp/salome_localres_workdir_u1449908/u1449908-INPUNHADHPCSRV-Thu-14-140720.016/base-stage2
+background : False
+follow_output : False
+[  OK  ]
+copying .../pick.1.gz...                                                
+>>> 2019/03/14-14:07:27.674  [Mess@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py:640]
+Warning or error raised :
+<A>_ALARM Code_Aster run ended
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/main.py", line 113, in main
+    start()
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/main.py", line 96, in start
+    meth(run, *args)
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/execute.py", line 461, in RunAster
+    run.Mess(_(u'Code_Aster run ended'), diag)
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py", line 640, in Mess
+    print_traceback=True)
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py", line 818, in DBG
+    stack_id=stack_id, all=all, prefix=prefix, *args)
+  File "/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py", line 774, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+[  OK  ]
+
+<A>_ALARM          Code_Aster run ended
+
+
+>>> 2019/03/14-14:07:27.676  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:27.676  [_clear_tmp@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py:484]
+cmd :
+\rm -rf /tmp/astk_u1449908/u1449908-INPUNHADHPCSRV-profil_astk.42066
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:27.685  [Shell@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/system.py:517]
+remote command ( <> INPUNHADHPCSRV and u1449908 <> u1449908) ? False
+
+>>> 2019/03/14-14:07:27.685  [_clear_tmp@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py:484]
+cmd :
+\rm -rf /tmp/u1449908-INPUNHADHPCSRV-interactif.42066
+background : False
+follow_output : False
+
+>>> 2019/03/14-14:07:27.697  [Sortie@/INSTALLABLES/salome_meca-2017/V2017.0.2/tools/Code_aster_frontend-20170/lib/python2.7/site-packages/asrun/run.py:733]
+exit 0
+
+ 
+ ---------------------------------------------------------------------------------
+                                            cpu     system    cpu+sys    elapsed
+ ---------------------------------------------------------------------------------
+   Preparation of environment              0.00       0.00       0.00       0.00
+   Copying datas                           0.29       0.11       0.40       0.39
+   Code_Aster run                          5.56       7.35      12.91       4.49
+   Copying results                         1.33       0.09       1.42       1.43
+ ---------------------------------------------------------------------------------
+   Total                                   7.26       7.69      14.95       6.53
+ ---------------------------------------------------------------------------------
+
+as_run 2017.0
+
+------------------------------------------------------------
+--- DIAGNOSTIC JOB : <A>_ALARM
+------------------------------------------------------------
+
+
+EXIT_CODE=0

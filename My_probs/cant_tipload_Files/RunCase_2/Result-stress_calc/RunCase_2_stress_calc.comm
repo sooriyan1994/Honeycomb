@@ -1,0 +1,17 @@
+POURSUITE()
+
+
+stress = CALC_CHAMP(
+    CARA_ELEM=elemprop,
+    CHAM_MATER=fieldmat,
+    CONTRAINTE=('EFGE_ELNO', 'SIEF_ELNO', 'SIGM_ELGA'),
+    MODELE=model,
+    RESULTAT=reslin,
+    TOUT_ORDRE='OUI'
+)
+
+IMPR_RESU(FORMAT='MED', RESU=_F(MAILLAGE=mesh, RESULTAT=stress), UNITE=2)
+
+IMPR_RESU(FORMAT='RESULTAT', RESU=_F(MAILLAGE=mesh, RESULTAT=stress), UNITE=3)
+
+FIN()

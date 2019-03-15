@@ -1,0 +1,32 @@
+POURSUITE()
+
+
+stress = CALC_CHAMP(
+    CARA_ELEM=elemprop,
+    CHAM_MATER=fieldmat,
+    CONTRAINTE=('EFGE_ELNO', 'SIEF_ELNO', 'SIGM_ELGA'),
+    MODELE=model,
+    RESULTAT=reslin,
+    TOUT_ORDRE='OUI'
+)
+
+table0 = POST_RELEVE_T(
+    ACTION=_F(
+        GROUP_NO=('fix', 'load'),
+        INTITULE='stress_table',
+        NOM_CHAM='SIEF_ELNO',
+        OPERATION=('EXTRACTION', ),
+        RESULTAT=stress,
+        TOUT_CMP='OUI'
+    )
+)
+
+IMPR_RESU(
+    FORMAT='RESULTAT',
+    RESU=_F(GROUP_NO=('fix', ), MAILLAGE=mesh, RESULTAT=stress),
+    UNITE=3
+)
+
+IMPR_TABLE(FORMAT='TABLEAU', TABLE=table0, UNITE=10)
+
+FIN()
