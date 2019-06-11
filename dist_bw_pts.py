@@ -41,3 +41,8 @@ def coord_plot(coord):
         Y = Y + [coord[i][1]]
     plt.scatter(X,Y)
     plt.show()
+
+def start_point(border, d):
+    cp = border[random.randint(0, len(border)-1)]
+    print cp
+    return new_point(d, cp)

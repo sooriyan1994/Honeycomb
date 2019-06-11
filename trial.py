@@ -1,8 +1,10 @@
 import numpy as np
 import random
-from dist_bw_pts import distance,new_point,border,coord_plot
+from dist_bw_pts import distance,new_point,border,coord_plot,start_point
 import matplotlib.pyplot as plt
+import time
 
+start = time.time()
 ##d = int(raw_input("Enter the diameter of the fibre (in microns): "))
 d = 6
 A_f = np.pi * d**2 /4
@@ -18,7 +20,7 @@ print n
 border = border(a)
 
 mag = 3*d/2
-coord = [[0,0]]
+coord = [start_point(border, d)]
 np_count = 0
 for i in range(n-1):
     k = 1
@@ -27,7 +29,7 @@ for i in range(n-1):
         np_count += 1
         if (-a/2) <= np[0] <= (a/2) and (-a/2) <= np[1] <= (a/2):
             for l in range(len(border)):
-                if distance(np,border[l]) < mag:
+                if distance(np,border[l]) < d:
                     break
             else:
                 for j in range(i):
@@ -42,12 +44,9 @@ for i in range(n-1):
     coord.append(np)
     
 print coord
+end = time.time()
+print(end-start)
 
-##test = coord[random.randint(0,n)]
-##dis = []
-##for i in range(n):
-##    dis = dis + [distance(test,coord[i])]
-##print dis
 
 ##coord_plot(border)
 coord_plot(coord)
