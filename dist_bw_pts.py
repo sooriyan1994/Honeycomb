@@ -2,9 +2,9 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-def distance(X1,Y1):
-    if isinstance(X1,list) and isinstance(Y1, list):
-        dis = np.sqrt((X1[0]-Y1[0])**2+(X1[1]-Y1[1])**2)
+def distance(X,Y):
+    if isinstance(X,list) and isinstance(Y, list):
+        dis = np.sqrt((X[0]-Y[0])**2+(X[1]-Y[1])**2)
     else:
         print('ERROR. The inputs have to be of type "list"')
     return round(dis,4)
