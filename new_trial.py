@@ -1,7 +1,6 @@
 import numpy as np
-import random
 from dist_bw_pts import distance,new_point,border,coord_plot
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import time
 
 start = time.time()
@@ -9,46 +8,52 @@ start = time.time()
 d = 6
 A_f = np.pi * d**2 /4
 ##a = int(raw_input("Side of the square area to be filled: "))
-a = 50
+a = 60
 A = a**2
 
+dis = 0.1 #Distance betweeen two fibers
+mag = d + dis # Minimum Distance between two fiber centers
+
+#A_f_act = np.pi * (mag)**2 / 4
+#A_act = (a-2*d)**2
+#n_max = A_act/A_f_act
+#V_f_max = float(int(n_max) * A_f / A)
+#print n_max
+
 ##V_f = float(raw_input("Preferred Volume fraction: "))
-V_f = 0.2
+V_f = 0.4
+
 n = int(V_f * A/A_f)
-print n
+#n = 50
+#V_f = round(A_f * n/A,3)
+#print ' Volume fraction : ',V_f
+print('Number of fibers to be filled in the area : ', n)
 
-border = border(a)
+dist_border = 0.1 # from the edge and the edge of fiber
 
-x = np.arange(-a/2+d,a/2+d+0.1, 0.1)
-y = np.arange(-a/2+d,a/2+d+0.1, 0.1)
-xx, yy = np.meshgrid(x,y)
+x = np.linspace(dist_border+d/2, a-(dist_border+d/2), 100, dtype=np.float)
+y = np.linspace(dist_border+d/2, a-(dist_border+d/2), 100, dtype=np.float)
 
-space = []
+space = np.stack(np.meshgrid(x, y), -1).reshape(-1,2)
+
 coord = []
-mag = 3*d/2
-
-for j in range(xx.shape[0]):
-        for k in range(xx.shape[1]):
-             space.append([round(xx[j][k],4),round(yy[j][k],4)])
 
 for i in range(n):
+        print(len(space))
         np = space[random.randrange(len(space))]
         coord.append(np)
-        print len(space)
-        l=0;
-        count = 0
-        while l < len(space):
+        temp = list(space)
+        
+        for l in range(len(space)):
                 if distance(space[l], np) < mag:
-                        del space[l]
-                for m in range(len(coord)):
-                        if distance(space[l],coord[m]) < mag:
-                                del space[l]
-                l += 1; count += 1
-        print 'count = ' + str(count)
+                        temp.remove(space[l])
+
+        space = list(temp[m])
+        
                 
-print coord
+print(coord)
 end = time.time()
 print(end-start)
 
 ##coord_plot(border)
-coord_plot(coord)
+#coord_plot(coord)
